@@ -279,12 +279,6 @@ document.getElementById("termLink").onclick = function(){
     showModel("Term of Use","termContent");
 
 }
-
-document.getElementById("cookieLink").onclick = function(){
-
-    showModel("Cookie Policy","cookieContent");
-
-}
 document.querySelector(".close").onclick = function(){
 
     model.style.display = "none";
