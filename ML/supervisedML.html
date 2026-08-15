@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervised Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: #090b18;
+            margin: 40px;
+            font-family: "Nunito", sans-serif;
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="margin:10px;">
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="logo"><img class="logoHome" src="../images/AILablogo.png" alt="A descriptive summary of the image">
+            AI Lab</div>
+        <div class="hideMenu">
+            <div class="menu" id="menu-toggle">
+                menu
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../aiIntro.html">AI</a></li>
+                <li><a href="../machineLearning.html">ML Projects</a></li>
+                <li><a href="../workshop.html">Workshops</a></li>
+                <li><a href="../challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div>
+            <button id="logout-btn" onclick="logoutUser()"
+                style="padding: 12px 20px; font-size:medium; background-color: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <section class="fadeSection">
+        <section class="mlHeader">
+            <h1 class="main-ml-title">Supervised Learning</h1>
+            <div class="title-divider"></div>
+            <h2 class="sub-ml-title">Example ML Projects</h2>
+        </section>
+    </section>
+
+    <br>
+    <h3 style="text-align: center;">House Price Prediction</h3>
+    <section class="project-showcase">
+
+        <section class="fadeSection">
+            <div class="showcase-card reveal-on-scroll">
+                <div id="ovHousepredict">
+                    <h3>Overview</h3>
+                    <p>This project predicts the selling price of a house based on its features.
+                        The machine learning model learns from historical housing data and estimates the price of new
+                        properties.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fadeSection">
+            <!-- Problem Solver Block -->
+            <div class="showcase-card reveal-on-scroll">
+                <h3>Problem Solved</h3>
+                <p>Buying or selling a house can be difficult because property prices vary depending on many complex
+                    factors.
+                    This project helps to estimate a fair market price automatically, removing human bias.
+                </p>
+            </div>
+        </section>
+
+        <!-- How it Works Interactive Timeline -->
+        <div class="showcase-card reveal-on-scroll">
+            <h3>How it works</h3>
+            <ul class="workflow-steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <p>Collect historical housing data.</p>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <p>Train a Linear Regression model.</p>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <p>Input new house specifications.</p>
+                </li>
+                <li>
+                    <span class="step-num">4</span>
+                    <p>The model predicts the optimal selling price.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="showcase-card reveal-on-scroll">
+            <h4>Technologies Used</h4>
+            <div class="tech-badge-cloud">
+                <span class="tech-badge py-lang">Python</span>
+                <span class="tech-badge pd-lang">pandas</span>
+                <span class="tech-badge np-lang">numpy</span>
+                <span class="tech-badge sk-lang">scikit-learn</span>
+                <span class="tech-badge lr-lang">Linear Regression</span>
+            </div>
+        </div>
+    </section>
+
+    <!--demoexample-->
+    <div class="container">
+        <h2>🏠 ML House Price Predictor</h2>
+        <p>Adjust the features below to simulate live model inference.</p>
+
+        <form id="mlPredictionForm">
+            <div class="form-group">
+                <label for="sqft">Size (Square Feet): <span id="sqftValue">1500</span> sqft</label>
+                <input type="range" id="sqft" min="500" max="5000" step="50" value="1500">
+            </div>
+
+            <div class="form-group">
+                <label for="rooms">Number of Bedrooms:</label>
+                <select id="rooms">
+                    <option value="1">1 Bedroom</option>
+                    <option value="2">2 Bedrooms</option>
+                    <option value="3" selected>3 Bedrooms</option>
+                    <option value="4">4 Bedrooms</option>
+                    <option value="5">5 Bedrooms</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State Location:</label>
+                <select id="state">
+                    <option value="450">Kuala Lumpur</option>
+                    <option value="380">Selangor</option>
+                    <option value="320">Penang</option>
+                    <option value="280">Johor</option>
+                    <option value="210">Perak</option>
+                    <option value="200">Melaka</option>
+                    <option value="190">Negeri Sembilan</option>
+                    <option value="180">Pahang</option>
+                    <option value="170">Sarawak</option>
+                    <option value="160">Sabah</option>
+                    <option value="140">Kedah</option>
+                    <option value="130">Terengganu</option>
+                    <option value="120">Kelantan</option>
+                    <option value="110">Perlis</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="isNew">Property Type:</label>
+                <select id="isNew">
+                    <option value="1.15">Brand New (Subsale/Developer)</option>
+                    <option value="1.0" selected>Subsale (Second-hand)</option>
+                </select>
+            </div>
+
+            <!-- Live Prediction Output Box -->
+            <div class="result-box">
+                <h3>Predicted Price: RM <span id="predictedPrice">0</span></h3>
+            </div>
+        </form>
+    </div>
+
+    <!--adv and disadv-->
+    <table class="advtable">
+        <thead>
+            <tr>
+                <th><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#75fbac">
+                        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                    </svg> Advantages</th>
+                <th><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#ea3323">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>High Accuracy:</strong> Predictions are precise because the model trains on verified,
+                    correct answers.
+                </td>
+                <td>
+                    <strong>Expensive Labeling:</strong> Gathering and tagging thousands of data points requires massive
+                    human labor.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Clear Metrics:</strong> Success is easy to measure using straightforward math like accuracy
+                    scores.
+                </td>
+                <td>
+                    <strong>Training Errors:</strong> Mistakes or bias in the original dataset will corrupt the final
+                    model.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Pre-defined Classes:</strong> Results are highly predictable since you decide the output
+                    categories beforehand.
+                </td>
+                <td>
+                    <strong>New Case Failure:</strong> The AI cannot handle or categorize completely new data types it
+                    has never seen.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Boundary Control:</strong> Human experts fully control the rules and target guidelines the
+                    AI learns.
+                </td>
+                <td>
+                    <strong>High Computation:</strong> Training the model initially demands significant time and
+                    computer processing power.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section class="fadeSection">
+        <section class="example-section">
+            <h3 style="text-align: center; margin:5%;">Other real life examples...</h3>
+            <div class="examples-grid">
+                <!-- Card 1 -->
+                <div class="example-card">
+                    <div class="card-icon">📥</div>
+                    <h4>Spam Detection</h4>
+                    <p>Classifying incoming emails as either spam or inbox.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="example-card">
+                    <div class="card-icon">🏠</div>
+                    <h4>House Price Prediction</h4>
+                    <p>Estimating real estate value based on size and location.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="example-card">
+                    <div class="card-icon">🩺</div>
+                    <h4>Medical Diagnosis</h4>
+                    <p>Identifying tumors in X-rays based on historical scans.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="example-card">
+                    <div class="card-icon">🗣️</div>
+                    <h4>Voice Recognition</h4>
+                    <p>Converting spoken audio into typed text characters.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="example-card">
+                    <div class="card-icon">💳</div>
+                    <h4>Credit Scoring</h4>
+                    <p>Predicting loan default risk based on repayment history.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- the js for demoexample-->
+    <script>
+        function logoutUser() {
+            document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+            document.cookie = "email=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            alert("You have been logged out successfully.");
+
+            window.location.href = "../../index.html";
+        }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll('.reveal-on-scroll');
+
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+
+                        scrollObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            cards.forEach(card => scrollObserver.observe(card));
+        });
+
+        const form = document.getElementById('mlPredictionForm');
+        const sqftInput = document.getElementById('sqft');
+        const sqftValueLabel = document.getElementById('sqftValue');
+        const roomsInput = document.getElementById('rooms');
+        const stateInput = document.getElementById('state');
+        const isNewInput = document.getElementById('isNew');
+        const priceOutput = document.getElementById('predictedPrice');
+
+        function runModelInference() {
+            const sqft = parseFloat(sqftInput.value);
+            const rooms = parseInt(roomsInput.value);
+            const stateWeight = parseFloat(stateInput.value);
+            const typeMultiplier = parseFloat(isNewInput.value);
+
+            sqftValueLabel.innerText = sqft;
+
+            const intercept = 30000;
+
+            const roomWeight = 25000;
+
+            let predictedValue = intercept + (sqft * stateWeight) + (rooms * roomWeight);
+
+            predictedValue = predictedValue * typeMultiplier;
+
+            priceOutput.innerText = predictedValue.toLocaleString('en-MY', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+        }
+
+        form.addEventListener('input', runModelInference);
+
+        runModelInference();
+
+    </script>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="../images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+        <!--quick Link-->
+        <div class="footCol">
+
+            <h3>Quick Links</h3>
+            <ul class="footerLinks">
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../aiIntro.html">AI</a></li>
+                <li><a href="../machineLearning.html">ML Projects</a></li>
+                <li><a href="../workshop.html">Workshops</a></li>
+                <li><a href="../challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            Ai Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User mahy browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script src="../headerFooter.js"></script>
+</body>
+
+</html>

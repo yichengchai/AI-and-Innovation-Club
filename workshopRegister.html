@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myIndex.css">
+    <link rel="stylesheet" href="workshop.css">
+    <title>Register - AI Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <div class="nav-trigger" id="top">
+        <nav class="navbar">
+            <div class="logo"><img class="logoHome" src="./images/AILablogo.png"
+                    alt="A descriptive summary of the image">
+                AI Lab
+            </div>
+            <div class="hideMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="aiIntro.html">AI</a></li>
+                    <li><a href="machineLearning.html">ML Projects</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="challenge.html">Challenges</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section class="register" id="register">
+        <div class="section-title">
+            <h2>
+                Register For Workshop
+            </h2>
+
+            <p>
+                Fill in your details and join our AI learning experience.
+            </p>
+        </div>
+
+        <div class="register-box">
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="workshop" required>
+
+                    <option value="">
+                        Select Workshop
+                    </option>
+
+                    <option>
+                        Prompt Engineering
+                    </option>
+
+                    <option>
+                        AI For Beginners
+                    </option>
+
+                    <option>
+                        Generative AI
+                    </option>
+
+                </select>
+
+                <button type="submit" class="btn btn-primary">
+                    Submit Registration
+                </button>
+            </form>
+            <p id="successMessage"></p>
+
+
+            <div id="registrationSummary" class="summary-box" style="display:none;">
+                <h3>📋 Registration Summary</h3>
+
+                <div class="summary-item">
+                    <span class="label">Name</span>
+                    <span id="summaryName"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="label">Email</span>
+                    <span id="summaryEmail"></span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="label">Workshop</span>
+                    <span id="summaryWorkshop"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="features">
+        <div class="section-title">
+
+            <h2>
+                Why Join Our Workshops
+            </h2>
+
+            <p>
+                Learn AI through practical experience and modern tools.
+            </p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature">
+
+                <div class="emoji-icon">
+                    <img src="images/handson.png" alt="Hands-on Practice">
+                </div>
+
+                <h3>
+                    Hands-on Practice
+                </h3>
+            </div>
+
+            <div class="feature">
+                <div class="emoji-icon">
+                    <img src="images/aiTools.png" alt="Real AI Tools">
+                </div>
+                <h3>
+                    Real AI Tools
+                </h3>
+            </div>
+
+            <div class="feature">
+                <div class="emoji-icon">
+                    <img src="images/trainer.png" alt="Expert Trainers">
+
+                </div>
+
+                <h3>
+                    Expert Trainers
+                </h3>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="join">
+        <div class="join-box">
+
+            <h2>
+                Ready To Learn AI?
+            </h2>
+            <p>
+                Join our workshops and develop future-ready
+                Artificial Intelligence skills today.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="workshop.html#workshops" class="btn btn-primary">
+                    Explore Workshops
+                </a>
+
+                <a href="#register" class="btn main-btn">
+                    Register Now
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Artificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+
+        <!--quick Link-->
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            Ai Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User may browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script src="headerFooter.js"></script>
+    <script src="workshop.js"></script>
+</body>
+
+</html>

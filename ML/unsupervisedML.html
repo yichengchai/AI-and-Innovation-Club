@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        h2 {
+            font-size: x-large;
+        }
+
+        h3 {
+            font-size: larger;
+        }
+
+        h4,
+        p {
+            font-size: large;
+        }
+
+        .navbar {
+            margin: 0px;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(59, 130, 246, .4);
+        }
+
+        .card {
+            margin-bottom: 25px;
+        }
+
+        .card-body {
+            color: lightblue;
+        }
+
+        .form-range {
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #4fc3ff;
+            font-weight: bold;
+        }
+
+        .alert {
+            margin-top: 20px;
+        }
+
+        #outputcardglass {
+            box-shadow: 0 0 10px rgba(111, 18, 192, 0.549);
+        }
+
+        body {
+            background: #090b18;
+            color: #cbd5e1;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .project-showcase {
+            max-width: 850px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .showcase-card {
+            background: #0d1127;
+            border: 1px solid #1f2647;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .showcase-card h3 {
+            color: #00e5ff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .showcase-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .showcase-card:hover {
+            border-color: #9c29f4;
+            box-shadow: 0 0 15px rgba(156, 41, 244, 0.2);
+        }
+
+        .workflow-steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .workflow-steps li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: transparent;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .workflow-steps li:hover {
+            background: #161c3d;
+            transform: translateX(8px);
+        }
+
+        .workflow-steps li div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .workflow-steps li strong {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .step-num {
+            background: #9c29f4;
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(156, 41, 244, 0.4);
+        }
+
+        .reveal-on-scroll {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="logo"><img class="logoHome" src="../images/AILablogo.png" alt="A descriptive summary of the image">
+            AI Lab</div>
+        <div class="hideMenu">
+            <div class="menu" id="menu-toggle">
+                menu
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../aiIntro.html">AI</a></li>
+                <li><a href="../machineLearning.html">ML Projects</a></li>
+                <li><a href="../workshop.html">Workshops</a></li>
+                <li><a href="../challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div>
+            <button id="logout-btn" onclick="logoutUser()"
+                style="padding: 11px 20px; background-color: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <section class="mlHeader">
+        <h1 class="main-ml-title">Unsupervised Learning</h1>
+        <div class="title-divider"></div>
+        <h2 class="sub-ml-title">Example ML Projects: Customer Segmentation</h2>
+    </section>
+
+
+    <section class="project-showcase">
+        <!-- Project Description -->
+        <section class="fadeSection">
+            <div class="showcase-card reveal-on-scroll">
+                <h3>Description</h3>
+                <p>
+                    Customer Segmentation is an unsupervised learning project that automatically groups customers based
+                    on
+                    shared behaviors, purchasing habits, or demographics. Unlike supervised learning, this model works
+                    without pre-existing labels or answers, discovering hidden patterns in raw business data to help
+                    companies target different audiences effectively.
+                </p>
+            </div>
+        </section>
+        <section class="fadeSection">
+            <!-- Project Functionality (How it works) -->
+            <div class="showcase-card reveal-on-scroll">
+                <h3>How does it function?</h3>
+                <ul class="workflow-steps">
+                    <li>
+                        <span class="step-num">1</span>
+                        <div>
+                            <strong>Data Ingestion:</strong>
+                            <p>Gather raw customer metrics such as total spending, shopping frequency, and age.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-num">2</span>
+                        <div>
+                            <strong>Feature Scaling:</strong>
+                            <p>Normalize data sizes so large numbers (like salary) do not overwhelm small numbers (like
+                                age).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-num">3</span>
+                        <div>
+                            <strong>K-Means Clustering:</strong>
+                            <p>The algorithm calculates mathematical distances to find natural group clusters
+                                automatically.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-num">4</span>
+                        <div>
+                            <strong>Profile Generation:</strong>
+                            <p>Output distinct buyer groups like "High Spenders," "Bargain Hunters," or "Churn Risks."
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <section class="fadeSection">
+        <div class="showcase-card reveal-on-scroll" style="margin-left:20%; margin-right: 20%;">
+            <h4>Technologies Used</h4>
+            <div class="tech-badge-cloud">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">pandas</span>
+                <span class="tech-badge">scikit-learn</span>
+                <span class="tech-badge">K-Means Clustering</span>
+                <span class="tech-badge">matplotlib</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+
+        <h1 class="text-center text-info mb-5">
+            Customer Segmentation
+        </h1>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card glass">
+                    <div class="card-body">
+                        <h3>Customer Information</h3>
+                        <hr>
+                        <label>Age</label>
+                        <input type="range" id="age" min="18" max="70" value="25" class="form-range">
+                        <p>
+                            Age :
+                            <span id="ageValue">
+                                25
+                            </span>
+                        </p>
+
+                        <label>Monthly Income (RM)</label>
+                        <input type="range" id="income" min="1000" max="10000" step="500" value="4500"
+                            class="form-range">
+                        <p>
+                            RM
+                            <span id="incomeValue">
+                                4500
+                            </span>
+                        </p>
+
+                        <label>Spending Score</label>
+                        <input type="range" id="spending" min="0" max="100" value="40" class="form-range">
+                        <p>
+                            <span id="spendingValue">
+                                40
+                            </span>
+                        </p>
+                        <label class="mt-3">
+                            Gender
+                        </label>
+                        <div>
+                            <input type="radio" name="gender" checked>
+                            Female
+                            <input type="radio" name="gender">
+                            Male
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="col-lg-6">
+                <div id="outputcardglass" class="card glass">
+                    <div class="card-body">
+                        <h3>
+                            AI Prediction
+                        </h3>
+                        <hr>
+                        <h2 id="cluster">
+                            Budget Shopper
+                        </h2>
+                        <p id="description">
+                            Likes discounts and spends carefully.
+                        </p>
+
+                        <div class="alert alert-primary">
+                            Recommended Promotion
+                            <ul>
+                                <li id="promo1">
+                                    10% Coupon
+                                </li>
+                                <li id="promo2">
+                                    Bundle Package
+                                </li>
+                                <li id="promo3">
+                                    Free Shipping
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--advantages and disadvatanges-->
+    <table class="advtable">
+        <thead>
+            <tr>
+                <th><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#75fbac">
+                        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                    </svg> Advantages</th>
+                <th><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#ea3323">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>No Labeling Needed:</strong> Saves massive time and money since data does not require manual
+                    tagging.
+                </td>
+                <td>
+                    <strong>Hard to Validate:</strong> Measuring accuracy is difficult because there are no correct
+                    answers to check against.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Hidden Pattern Discovery:</strong> Finds unexpected insights and groupings that humans might
+                    completely miss.
+                </td>
+                <td>
+                    <strong>Unpredictable Outputs:</strong> The AI may group data in ways that make no practical or
+                    logical sense to humans.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Raw Data Ready:</strong> Works directly on raw, messy, and unstructured data like images,
+                    audio, or text.
+                </td>
+                <td>
+                    <strong>Heavy Post-Processing:</strong> Human experts must spend time analyzing the clusters to
+                    understand what they mean.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Automatic Feature Extraction:</strong> Reduces data complexity on its own by automatically
+                    finding the most important traits.
+                </td>
+                <td>
+                    <strong>High Algorithmic Complexity:</strong> Calculating similarities across massive datasets
+                    requires intense computing power.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--other real life examples-->
+    <section class="fadeSection">
+        <section class="examples-section">
+            <h3 style="text-align: center; margin:5%;">Other real life examples...</h3>
+            <div class="examples-grid">
+                <!-- Card 1 -->
+                <div class="example-card">
+                    <div class="card-icon">🛍️</div>
+                    <h4>Customer Segmentation</h4>
+                    <p>Grouping shoppers by buying habits for targeted marketing.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="example-card">
+                    <div class="card-icon">🎵</div>
+                    <h4>Recommendation Systems</h4>
+                    <p>Suggesting new songs based on similar listening patterns.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="example-card">
+                    <div class="card-icon">🛡️</div>
+                    <h4>Anomaly Detection</h4>
+                    <p>Spotting unusual credit card transactions to prevent fraud.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="example-card">
+                    <div class="card-icon">🧬</div>
+                    <h4>Medical Research</h4>
+                    <p>Clustering genetic data to discover new disease variants.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="example-card">
+                    <div class="card-icon">📰</div>
+                    <h4>News Tagging</h4>
+                    <p>Automatically sorting thousands of articles into topic themes.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="../images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+        <!--quick Link-->
+        <div class="footCol">
+
+            <h3>Quick Links</h3>
+            <ul class="footerLinks">
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../aiIntro.html">AI</a></li>
+                <li><a href="../machineLearning.html">ML Projects</a></li>
+                <li><a href="../workshop.html">Workshops</a></li>
+                <li><a href="../challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            Ai Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User mahy browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script>
+        //to log out
+        function logoutUser() {
+            document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+            document.cookie = "email=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            alert("You have been logged out successfully.");
+
+            window.location.href = "../../index.html";
+        }
+
+
+        const age = document.getElementById("age");
+        const income = document.getElementById("income");
+        const spending = document.getElementById("spending");
+
+        const ageValue = document.getElementById("ageValue");
+        const incomeValue = document.getElementById("incomeValue");
+        const spendingValue = document.getElementById("spendingValue");
+
+        const cluster = document.getElementById("cluster");
+        const description = document.getElementById("description");
+
+        const promo1 = document.getElementById("promo1");
+        const promo2 = document.getElementById("promo2");
+        const promo3 = document.getElementById("promo3");
+
+
+        function predictCluster() {
+
+            ageValue.innerHTML = age.value;
+            incomeValue.innerHTML = income.value;
+            spendingValue.innerHTML = spending.value;
+
+            let spend = Number(spending.value);
+            let money = Number(income.value);
+
+
+
+            if (spend > 70) {
+
+                cluster.innerHTML = "⭐ Premium Customer";
+
+                description.innerHTML = "Frequently purchases premium products.";
+
+                promo1.innerHTML = "VIP Membership";
+
+                promo2.innerHTML = "Exclusive Discounts";
+
+                promo3.innerHTML = "Priority Support";
+
+            }
+
+            else if (money > 7000) {
+
+                cluster.innerHTML = "💼 High Income Saver";
+
+                description.innerHTML = "High income but spends carefully.";
+
+                promo1.innerHTML = "Investment Promotion";
+
+                promo2.innerHTML = "Luxury Bundle";
+
+                promo3.innerHTML = "Reward Points";
+
+            }
+
+            else if (spend > 40) {
+
+                cluster.innerHTML = "🛍 Regular Shopper";
+                description.innerHTML = "Shops regularly with moderate spending.";
+                promo1.innerHTML = "Cash Voucher";
+                promo2.innerHTML = "Birthday Gift";
+                promo3.innerHTML = "Free Shipping";
+            }
+
+            else {
+                cluster.innerHTML = "💰 Budget Shopper";
+                description.innerHTML = "Prefers affordable products.";
+                promo1.innerHTML = "10% Coupon";
+                promo2.innerHTML = "Bundle Package";
+                promo3.innerHTML = "Student Discount";
+            }
+        }
+
+        age.oninput = predictCluster;
+        income.oninput = predictCluster;
+        spending.oninput = predictCluster;
+
+        predictCluster();
+    </script>
+    <script src="../headerFooter.js"></script>
+</body>
+
+</html>

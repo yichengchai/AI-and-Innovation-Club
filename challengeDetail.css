@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05010f;
+  color: white;
+  overflow-x: hidden;
+}
+
+.welcome h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6, #ec4899);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowing 15s linear;
+  letter-spacing: 2px;
+}
+
+@keyframes flowing {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.welcome {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.welcome h2 {
+  color: #38bdf8;
+}
+
+.welcome p {
+  text-align: center;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+.detailHero {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  margin-bottom: 180px;
+  line-height: 80px;
+  gap: 30px;
+  text-align: center;
+}
+
+.detailHero h1 {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #38bdf8;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(14, 165, 233);
+}
+
+.dropTitle {
+  display: inline-block;
+}
+
+.dropTitle span {
+  display: inline-block;
+  opacity: 0;
+}
+
+.dropTitle.show span {
+  animation: dropLetter 0.6s ease forwards;
+}
+
+@keyframes dropLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  60% {
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detailHero p {
+  opacity: 0;
+  transform: translateX(-120px);
+  font-size: 20px;
+  color: #93c5fd;
+  max-width: 650px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+.detailHero p.show {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.challengeTtl {
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow:
+    2px 2px 0 #1e3a5f,
+    4px 4px 0 #1a2f4f,
+    6px 6px 0 #152540,
+    8px 8px 0 #101a30,
+    10px 10px 0 #0a1020,
+    0 0 30px rgba(59, 130, 246, 0.3);
+  font-size: 50px;
+}
+
+.challengeContain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin: 10px;
+}
+
+.challengeDetail {
+  border: 2px solid rgba(59, 130, 246, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.quickInfo {
+  width: 100%;
+  padding: 30px;
+}
+
+.quickInfo > h2 {
+  text-align: center;
+  margin: 0;
+  color: #62a5e0;
+}
+
+.description {
+  padding: 10px 0;
+}
+
+.hiddenContent {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+  transition:
+    opacity 0.6s ease 0.1s,
+    max-height 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.description h2,
+.infoGrid h3 {
+  color: #cbd5e1;
+}
+
+.infoGrid p,
+.description p,
+.description ul {
+  color: #f5f5f0;
+}
+
+.description p,
+.description ul {
+  text-align: justify;
+}
+
+.description ul {
+  text-align: left;
+  padding-left: 220px;
+}
+
+.description p {
+  margin-bottom: 10px;
+}
+
+.challengeDetail:hover {
+  max-height: 1000px;
+  z-index: 10;
+  border-color: rgba(139, 92, 246, 0.8);
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+  background: rgba(23, 3, 70, 0.3);
+}
+
+.challengeDetail:hover .quickInfo > h2 {
+  color: #a855f7;
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.challengeDetail:hover .hiddenContent {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.challengeDetail:hover .description h2 {
+  color: #a855f7;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.challengeDetail:hover .description p,
+.challengeDetail:hover .description ul,
+.challengeDetail:hover .infoGrid p {
+  color: #e2e8f0;
+}
+
+.challengeDetail:hover .infoGrid h3 {
+  color: #c084fc;
+}
+
+.submitSection {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px) brightness(120%) saturate(180%);
+  margin-top: 200px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitSection h1 {
+  margin-bottom: 40px;
+  color: #0ea5e9;
+  text-shadow:
+    -1px -1px 0 #c7d2fe,
+    -1px 1px 0 #6366f1,
+    6px 6px 0 #312e81,
+    10px 10px 0 #1e1b4b,
+    0px 0px 30px rgba(99, 102, 241, 0.3),
+    0px 0px 60px rgba(79, 70, 229, 0.1);
+}
+
+.submitSection p {
+  color: #cbd5e1;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.submitSection form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 18px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.submitSection form label:first-of-type {
+  margin-top: 40px;
+}
+
+.submitSection input,
+.submitSection select {
+  background: #0a0a1a;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.submitSection button {
+  background: linear-gradient(135deg, #3b82f6, #1e3a5f);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 100px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.submitSection button:hover {
+  transform: scale(1.07);
+  background: #0ea5e9;
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  .welcome {
+    height: 100vh;
+    padding: 20px;
+    gap: 2rem;
+  }
+  .welcome h1 {
+    font-size: 2.2rem;
+  }
+  .welcome h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .welcome p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+
+  .detailHero h1 {
+    font-size: 28px;
+  }
+  .detailHero p {
+    font-size: 16px !important;
+    line-height: 35px !important;
+    text-align: center;
+  }
+  .challengeTtl {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  .challengeContain {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 20px;
+  }
+  .challengeDetail {
+    max-height: 120px;
+  }
+  .quickInfo {
+    padding: 25px;
+  }
+  .quickInfo > h2 {
+    font-size: 22px;
+  }
+  .hiddenContent {
+    margin-top: 15px;
+  }
+  .infoGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .description h2 {
+    font-size: 22px;
+  }
+  .description p,
+  .description ul {
+    font-size: 15px;
+  }
+  .description ul {
+    padding-left: 200px;
+  }
+  .submitSection {
+    margin-top: 120px;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 50px 20px;
+  }
+  .submitSection h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .submitSection p {
+    text-align: center;
+    line-height: 25px;
+  }
+  .submitSection form {
+    width: 100%;
+    gap: 15px;
+  }
+  .submitSection input,
+  .submitSection select {
+    width: 90%;
+    height: 45px;
+    color: white;
+    padding: 10px;
+  }
+  .submitSection button {
+    padding: 15px 35px;
+  }
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myIndex.css">
+    <link rel="stylesheet" href="workshop.css">
+    <title>AI Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <div class="nav-trigger" id="top">
+        <nav class="navbar">
+            <div class="logo"><img class="logoHome" src="./images/AILablogo.png"
+                    alt="A descriptive summary of the image">
+                AI Lab
+            </div>
+            <div class="hideMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="aiIntro.html">AI</a></li>
+                    <li><a href="machineLearning.html">ML Projects</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="challenge.html">Challenges</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--content-->
+    <section class="main">
+        <div class=" main-content">
+            <span class="tag">
+                AI Innovation Hub
+            </span>
+
+            <h1>
+                Explore The Future With AI
+            </h1>
+
+            <p>
+                Learn about Artificial Intelligence, explore different
+                AI tools, and practice using AI through our workshops.
+            </p>
+
+            <div class="main-buttons">
+                <a href="#workshops" class="btn main-btn">
+                    Explore Workshops
+                </a>
+
+               <a href="workshopRegister.html#register" class="btn main-btn">
+                    Register Now
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="featured">
+        <div class="section-title">
+            <h2>
+                Featured Workshop
+            </h2>
+
+            <p>
+                Explore our featured workshop designed to enhance your AI skills.
+            </p>
+        </div>
+
+        <div class="featured-card">
+            <div class="featured-icon">
+                <img src="images/workshop1.png" alt="Prompt Engineering">
+            </div>
+
+            <div class="featured-info">
+                <h3>
+                    Prompt Engineering Workshop
+                </h3>
+
+                <p>
+                    Learn how to write better prompts and get more useful answers
+                    from AI tools.
+                </p>
+
+                <div class="details">
+                    <div>
+                        ⏰
+                        1 Hour
+                    </div>
+
+                    <div>
+                        🎯
+                        Beginner
+                    </div>
+                </div>
+
+                <a href="#workshops" class="btn main-btn start-btn">
+                    Start Workshop
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="workshops" class="workshops">
+        <div class="section-title">
+
+            <h2>Explore Our Workshops</h2>
+            <p>Choose a workshop and enhance your AI knowledge.</p>
+
+        </div>
+
+        <div class="workshop-box">
+            <div class="workshop-card">
+                <div class="emoji-icon">
+                    <img src="images/workshop2.png" alt="Prompt Engineering">
+                </div>
+
+                <h3>Prompt Engineering</h3>
+
+                <p>
+                    Learn how to communicate with AI by creating clear prompts
+                    and improving AI responses using tools such as ChatGPT and Gemini.
+                </p>
+
+                <div class="meta">
+
+                    <span>🟢 Beginner</span>
+                    <span>⏰ 1 Hour</span>
+                    <span>📅 15 Sept</span>
+
+                </div>
+
+                <button class="btn view-btn">
+                    View More
+                </button>
+
+                <div class="hidden-info">
+                    <p>Learn how to communicate effectively with AI models.</p><br>
+
+                    <h4>Topics:</h4>
+
+                    <ul>
+                        <li>✓ What is Prompt Engineering</li>
+                        <li>✓ Basic prompt structure</li>
+                        <li>✓ Role prompting</li>
+                        <li>✓ Few-shot prompting</li>
+                    </ul><br>
+
+                    <h4>Activity:</h4><br>
+                    <p>Create your own prompt and compare AI responses.</p><br>
+                    <h4>Learning Outcomes</h4>
+
+                    <ul>
+                        <li>✓ Create simple and clear prompts</li>
+                        <li>✓ Understand how AI responds</li>
+                        <li>✓ Use AI tools more effectively</li>
+                    </ul>
+
+                </div>
+
+                <button class="btn practice-btn" onclick="showPractice(this)">
+                    🤖 Practice AI
+                </button>
+
+                <div class="practice-box">
+                    <h4>AI Prompt Simulator</h4>
+                    <p>Choose an example or create your own prompt.</p>
+
+                    <div class="prompt-example">
+                        <h4>Quick Examples</h4>
+
+                        <div class="example-buttons">
+
+                            <button onclick="setPrompt('Explain what AI is')">
+                                Explain AI
+                            </button>
+
+                            <button onclick="setPrompt('Write a story about robots')">
+                                Write Story
+                            </button>
+
+                            <button onclick="setPrompt('Create an image prompt')">
+                                Image Prompt
+                            </button>
+
+                            <button onclick="setPrompt('Explain machine learning')">
+                                Machine Learning
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <p>Enter your prompt:</p>
+
+                    <textarea id="promptInput" placeholder="Example: Explain what AI is"></textarea>
+
+                    <button class="btn main-btn" onclick="generateResponse()">
+                        Generate
+                    </button>
+
+                    <h4>AI Response</h4>
+
+                    <div id="aiOutput">
+                        Your AI response will appear here...
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="workshop-card">
+
+                <div class="emoji-icon">
+                    <img src="images/ai.png" alt="AI Beginner">
+                </div>
+
+                <h3>AI For Beginners</h3>
+                <p>
+                    Understand AI fundamentals, machine learning concepts, and practical AI
+                    applications.
+                </p>
+
+                <div class="meta">
+                    <span>🟢Beginner</span>
+                    <span>⏰ 1.5 Hours</span>
+                    <span>📅 22 Sept</span>
+                </div>
+
+                <button class="btn view-btn">
+                    View More
+                </button>
+
+                <div class="hidden-info">
+                    <p>
+                        Explore the fundamentals of Artificial Intelligence and understand
+                        how machines learn, process information and make decisions.
+                    </p><br>
+
+                    <h4>Topics:</h4>
+
+                    <ul>
+                        <li>✓ What is Artificial Intelligence?</li>
+                        <li>✓ Machine Learning vs Deep Learning</li>
+                        <li>✓ How AI learns from data</li>
+                    </ul><br>
+
+                    <h4>Activity</h4>
+
+                    <p>Identify AI applications in daily life.</p>
+                </div>
+
+            </div>
+
+            <div class="workshop-card">
+                <div class="emoji-icon">
+                    <img src="images/generative.png" alt="Generative AI">
+                </div>
+
+                <h3>Generative AI</h3>
+
+                <p>
+                    Explore Generative AI and learn how to create text, images and creative
+                    content using modern AI tools.
+                </p>
+
+                <div class="meta">
+                    <span>🟠 Intermediate</span>
+                    <span>⏰ 2 Hours</span>
+                    <span>📅 29 Sept</span>
+                </div>
+
+                <button class="btn view-btn">
+                    View More
+                </button>
+
+                <div class="hidden-info">
+                    <p>
+                        Learn about popular Generative AI tools and how they can help
+                        create text, images and digital content.
+                    </p>
+
+                    <div class="ai-tools">
+                        <a href="https://chat.openai.com" target="_blank" class="tool-btn">
+                            🤖 ChatGPT
+                        </a>
+
+                        <a href="https://gemini.google.com" target="_blank" class="tool-btn">
+                            ⭐ Google Gemini
+                        </a>
+
+                        <a href="https://copilot.microsoft.com" target="_blank" class="tool-btn">
+                            💻 Microsoft Copilot
+                        </a>
+
+                        <a href="https://www.canva.com/ai/" target="_blank" class="tool-btn">
+                            🎨 Canva AI
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join">
+        <div class="join-box">
+
+            <h2>
+                Ready To Learn AI?
+            </h2>
+            <p>
+                Join our workshops and develop future-ready
+                Artificial Intelligence skills today.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#workshops" class="btn btn-primary">
+                    Explore Workshops
+                </a>
+
+               <a href="workshopRegister.html#register" class="btn main-btn">
+                    Register Now
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Artificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+
+        <!--quick Link-->
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            Ai Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User may browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script src="headerFooter.js"></script>
+    <script src="workshop.js"></script>
+</body>
+
+</html>

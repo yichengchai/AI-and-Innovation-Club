@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>AI Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        span {
+            font-family: "Gelasio", sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.799);
+            background-image: url("./images/balckbluewhiteGlass.jpg");
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-blend-mode: overlay;
+
+        }
+
+        #home-box {
+            font-family: "Outfit", sans-serif;
+        }
+        #home-box h3,
+        h4 {
+            font-weight: 200;
+        }
+
+        .home-box-section h3 {
+            font-family: "Outfit", sans-serif;
+            font-weight: 250;
+        }
+
+        .exploreBtn {
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
+        }
+
+        footer {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img class="logoHome" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+            AI Lab</div>
+        <div class="hideMenu">
+            <div class="menu" id="menu-toggle" style="padding:9.5% 25px; font-size: 22px;" >
+                menu
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div>
+            <button id="logout-btn" onclick="logoutUser()"
+                style="padding: 13.2px 20px; font-size:medium; background-color: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!--introduce about AI Lab-->
+    <p><br><br><br><br><br><br><br></p>
+
+    <h1 id="title">AI Lab</h1>
+    <h2 class="hero-title">
+        <span class="word">AI</span>
+        <span class="word"> & </span>
+        <span class="word">Innovations</span>
+        <span class="word">Future</span>
+        <br><br>
+    </h2>
+    <!--quote of AI generate-->
+    <div id="home-quote-intro" class="fadeSection">
+        <div class="quoteBox">
+            <h2>AI Quote of the Day</h2>
+            <p id="quoteText">
+                Loading inspirational quote...
+            </p>
+            <h3 id="quoteAuthor">Author</h3>
+            <button id="newQuoteBtn" class="exploreBtn">New Quote</button>
+        </div>
+
+        <!--introduce AI Web-->
+        <div id="home-box">
+            <h3>
+                AI Lab is an Educational website and a small society club, developed as one of the academic projects
+                that introduce users to the
+                exciting world of Artificial Intelligence (AI) and Innovation.</h3>
+            <br>
+            <h4>Our mission is to provide beginners with easy-to-understand learning resources on AI concepts, Machine
+                Learning, Engineering workshops
+                and the latest innovation challenges.
+            </h4>
+            <br>
+            <h3>Start Explore with Us!</h3>
+            <a href="#about" id="startExplore" class="exploreBtn">Get Started</a>
+        </div>
+    </div>
+
+    <section class="fadeSection">
+        <div class="section-content">
+            <section id="about">
+                <div class="home-box">
+                    <div class="home-box-section">
+                        <h2 class="home-card-title">About Us</h2>
+                        <h3>The AI lab was created by 2026.
+                            The founder of the AI Lab were Group 16:<br>
+                            Let's four of us introduce about ourselves:</h3>
+                        <h3 style="color:yellow; font-size: medium;"><em>click here to see our virtual representive
+                                picture!</em></h3>
+                        <button id="aboutUs" class="exploreBtn"> About Members </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--introduction to ai-->
+            <section id="intro">
+                <div class="home-box">
+                    <div class="home-box-section">
+                        <h2 class="title">What is Artificial Intelligence (AI)?</h2>
+                        <h3>AI is transforming the way of people work, communicate, and solve problems.
+                            As the usage of AI become more widely,
+                            AI is becoming an essential part of modern life.
+                        </h3>
+                        <button id="exploreAi" class="exploreBtn"> explore more → </button>
+                    </div>
+                </div>
+            </section>
+            <!--machine learning project-->
+            <section id="ml">
+                <div class="home-box">
+                    <div class="home-box-section">
+                        <h2 class="title">Machine Learning</h2>
+                        <h3>Machine Learning is one of the most poweful branches of AI.
+                            Instead of being explicitly programmed, computers learn the patterns from the data
+                            and improve their performance through experience.
+                        </h3>
+                        <button id="exploreMl" class="exploreBtn">Introduce ML → </button>
+                    </div>
+                </div>
+            </section>
+            <!--prompt engineering workshop-->
+            <section id="workshop">
+                <div class="home-box">
+                    <div class="home-box-section">
+                        <h2 class="title">Prompt engineering workshops</h2>
+                        <h3>Prompt Engineering is the skill of communicating effectively with AI models such as ChatGPT
+                            and
+                            Gemini.
+                            A well-designed prompt helps AI generate more accurate and useful response.
+                        </h3>
+                        <button id="exploreWorkshop" class="exploreBtn">View more</button>
+                    </div>
+                </div>
+            </section>
+            <!--innovation challenge-->
+            <section id="challenge">
+                <div class="home-box">
+                    <div class="home-box-section">
+                        <h2 class="title">The Innovation Challenge that AI facing:</h2>
+                        <h3>AI continues to revolutionize industries,
+                            but it also raises important question about ethics, privacy, security, and responsible
+                            innovation.
+                        </h3>
+                        <button id="exploreInno" class="exploreBtn">More Challenges</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+        <!--quick Link-->
+        <div class="footCol">
+
+            <h3>Quick Links</h3>
+            <ul class="footerLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--cookie: record the name and email addresss for later feedbackform use-->
+    <div id="cookie-display" style="display: none;">
+        <div id="home-cookie">
+            <h3>Login</h3>
+            <div class="cookie-form">
+                <label for="username">Name: </label>
+                <input type="text" id="username" value="Tester">
+            </div>
+            <div class="cookie-form">
+                <label for="email">Email: </label>
+                <input type="text" id="email" value="testexample@gmail.com">
+            </div>
+            <button onclick="submitCookieModal()">Submit & Save Cookie</button>
+        </div>
+    </div>
+
+    <script>
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+            return null;
+        }
+
+        // Run when page loads
+        window.onload = function () {
+            var existingUser = getCookie("username");
+
+            if (!existingUser) {
+                document.getElementById("cookie-display").style.display = "flex";
+                
+            } else {
+                
+                document.getElementById("cookie-display").style.display = "none";
+                
+            }
+        };
+
+        function submitCookieModal() {
+            var email = document.getElementById("email").value;
+            var username = document.getElementById("username").value;
+
+            if (username.trim() === "" || email.trim() === "") {
+                alert("Please enter both your name and email.");
+                return;
+            }
+
+            var emailCookieString = "email=" + encodeURIComponent(email) + ";path=/;SameSite=Lax";
+            var nameCookieString = "username=" + encodeURIComponent(username) + ";path=/;SameSite=Lax";
+
+            document.cookie = emailCookieString;
+            document.cookie = nameCookieString;
+
+            alert("Welcome, " + username + ". AI Lab have successfully store your information. Enjoy the AI Lab.");
+
+            document.getElementById("cookie-display").style.display = "none";
+        }
+
+        // To log out
+        function logoutUser() {
+            document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+            document.cookie = "email=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            alert("You have been logged out successfully.");
+
+            window.location.href = window.location.pathname + window.location.search;
+        }
+
+    </script>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            AI Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>This website is developed for educational purpose. </p>
+        <p>User mahy browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <div id="cookieContent" style="display: none;">
+        <p>
+            One essential cookie is used.<br>
+            Purpose: reminder consent.<br>
+            Duration: 5 days. <br>
+            No advertising cookies.<br>
+        </p>
+    </div>
+
+    <script src="homepage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05010f;
+  color: white;
+  overflow-x: hidden;
+}
+
+.nav-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 1000;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 0, 30, 0.75);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #3b82f6;
+  transform: translateY(-100%);
+  transition: 0.4s ease;
+  z-index: 999;
+  min-height: 70px;
+}
+
+.nav-trigger:hover .navbar,
+.navbar:hover {
+  transform: translateY(0);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #60a5fa;
+}
+.logoHome {
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+}
+.nav-links {
+  display: flex !important;
+  list-style: none;
+  gap: 35px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.logoLayout{
+    display:flex;
+}
+
+.logoFoot{
+    max-width:70px;
+    max-height:70px;
+    width:49px;
+    height:49px;
+}
+
+.footer{
+    padding:50px;
+    background:rgba(15, 20, 40, 0.636);
+    backdrop-filter: blur(10px);
+    border-top:2px solid #3B82F6;
+    color:whitesmoke;
+
+    display:flex;
+    flex-wrap: wrap;
+    box-shadow: 0 -5px 30px rgba(59,130,246,.3);
+}
+
+.footCol{
+    flex:1;
+    min-width:250px;
+}
+
+.footDesc{
+    line-height: 1.8;
+    color:#d7d7d7;
+}
+
+.footerLinks{
+    list-style:none;
+    padding:0;
+}
+
+.footerLinks a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.footerLinks a:hover{
+    color:#5fc5ff;
+    text-shadow: 0 0 10px #3B82F6;
+}
+
+#LogoName{
+    padding: 0px 12px;
+    color: yellow;
+}
+
+.footPolicy a{
+    color:rgb(125, 152, 188);
+    text-decoration:none;
+    margin:0 8px;
+}
+
+.footerBtn{
+    background: none;
+    border: none;
+    color:rgb(125, 152, 188);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footerBtn:hover{
+    color:#5fc5ff;
+    text-shadow: 0 0 10px #5fc5ff;
+}
+
+#cookie-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:998;
+}
+
+#cookie-banner{
+    position:fixed;
+    width:90%;
+    max-width:380px;
+    padding:30px;
+    bottom:20px;
+    left:20px;
+    background:rgba(20,20,30,0.9);
+    color: white;
+    padding:20px;
+    border-radius:15px;
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.btnCookie{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+    background:#3B82F6;
+    color:white;
+    font-size:16px;
+    text-decoration: none;
+}
+
+.btnCookie:hover{
+    background:#2563eb;
+}
+/*pop up message*/
+
+
+.model{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    justify-content: center;
+    align-items: center;
+    z-index:999;
+}
+
+.model-content{
+    width:650px;
+    max-width: 90%;
+    padding:30px;
+    border-radius: 20px;
+    background:rgba(20,25,45,.85);
+    backdrop-filter: blur(20px);
+    color:white;
+    border:2px solid #3B82F6;
+    box-shadow:0 0 30px rgba(59,130,246,.5) ;
+    animation:popup .4s ease;
+    z-index: 999;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close{
+    float:right;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+.close:hover{
+    color:#2965c4; 
+}
+
+cookieContent{
+    z-index:9999;
+}
+
+/*machine learning*/
+.welcomeML{
+    position:relative;
+    padding: 130px 50px ;
+}
+
+.hidden-text{
+    position:absolute;
+
+    left:50%;
+    top:45%;
+
+    transform:translate(-50%,-50%);
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 0.9;
+    text-align: center;
+    color:#8aa8ff;
+    opacity:0.04;
+    filter:blur(8px);
+
+    z-index:1;
+
+    transition:
+        opacity 0.3s,
+        filter 0.3s;
+}
+
+.hidden-text:hover{
+    filter:blur(0px);
+    color:#5f53ed;
+}
+
+.card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+
+}
+
+.process-card{
+    width:250px;
+    padding:5px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    position:relative;
+    
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:0 0 20px rgba(59,130,246,.4);
+    transition:.3s;
+}
+
+.process-card:hover{
+    transform :translateY(-8px);
+    box-shadow:0 0 30px rgba(59, 130, 246, .8);
+}
+
+.imgML{
+    max-width:fit-content;
+    max-height:fit-content;
+    
+    width: 85% ;
+    height:80%;
+}
+
+.cardApplication{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.cardApplication-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.realWorld-card{
+    width:250px;
+    padding:25px;
+    border-radius:20px;
+
+    color:whitesmoke;
+    
+    
+    backdrop-filter: blur(2px);
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:0 0 20px rgba(59,130,246,.4);
+    transition:.3s;
+    flex: 0 0 300px;
+}
+
+.realWorld-card:hover{
+    transform :translateY(-8px);
+    color:#f3fa1f;
+    background:rgba(0, 0, 0, 0.358);
+    box-shadow:0 0 30px rgba(59, 130, 246, .8);
+}
+
+.cardRealWorld{
+    text-align: center;
+    overflow:hidden;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+
+.slidertrack{
+    display:flex;
+    width:max-content;
+    gap: 25px;
+    animation:scrollLeft 27s linear infinite;
+}
+
+@keyframes scrollLeft {
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(calc(-50% - 12.5px));
+    }
+}
+.slidertrack:hover{
+    animation-play-state:paused;
+}
+
+.TypeMLLinks{
+    text-decoration: none;
+    font-size: 18px;
+    color:whitesmoke;
+    border-radius: 20px;
+    padding:10px;
+    border:2px solid rgba(255,255,255,.2);
+    
+}
+.TypeMLLinks:hover{
+    color:rgb(255, 255, 23);
+    
+    text-shadow: 0 0 10px rgb(194, 165, 2);
+}
+
+#typeML{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    text-align: center;
+    
+}
+
+
+.MLcard-container{
+ 
+    padding:20px;
+    justify-content:center;
+    gap:25px;
+    text-align: center;
+}
+
+#supervised:hover{
+    background:#2b68cb;
+    color:#001e4f;
+}
+
+#unsupervised:hover{
+    background:#4b47b2;
+    color:#020033;
+}
+
+#reinforcement:hover{
+    background:#733bf6dc;
+    color:#0b0221dc;
+}
+
+.introtypeML{
+    display:none;
+    justify-content: center;
+    text-align:justify;
+    list-style:none ; 
+}
+
+.process-card:hover .introtypeML{
+
+    display:block ;
+    color:whitesmoke;
+    margin:20px;
+    margin-left: -25px;
+    margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    .logoHome {
+        width: 38px;
+        height: 38px;
+        margin-right: 8px;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+    .footer {
+        padding: 30px 15px;
+        gap: 30px;
+    }
+    .footCol h3 {
+        font-size: 17px;
+    }
+    .footCol p {
+        font-size: 13px;
+    }
+    #LogoName {
+        font-size: 20px;
+    }
+    .logoFoot {
+        width: 38px;
+        height: 38px;
+    }
+    .model-content {
+        padding: 20px 15px;
+    }
+    .model-content h2 {
+        font-size: 18px;
+    }
+    #cookie-banner {
+        padding: 15px;
+        bottom: 10px;
+        left: 5%;
+        width: 90%;
+    }
+    #cookie-banner p {
+        font-size: 12px;
+    }
+    .btnCookie {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .welcomeML {
+        padding: 80px 15px 30px;
+    }
+    .welcomeML h1 {
+        font-size: 22px;
+    }
+    .process-card {
+        max-width: 100%;
+    }
+    .realWorld-card {
+        max-width: 100%;
+    }
+    .TypeMLLinks {
+        font-size: 14px;
+        padding: 6px 15px;
+        max-width: 100%;
+    }
+}

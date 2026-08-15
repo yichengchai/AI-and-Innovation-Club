@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!--arrow icon-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement Learning</title>
+    <style>
+        h1 {
+            color: lightblue;
+        }
+
+        body {
+            background: #090b18;
+            font-family: "Nunito", sans-serif;
+        }
+
+        section {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        .nav-bar {
+            font-size: 20px;
+        }
+
+        .footer h3 {
+            font-size: 20px;
+        }
+
+        .footer p,
+        .footer a {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width:768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .mainComponentRL {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .flow {
+                flex-wrap: wrap;
+
+            }
+
+            .bubbleSquare {
+                width: 120px;
+                height: 120px;
+                flex-direction: column;
+            }
+
+            .front img {
+                width: 45%;
+            }
+
+            .back {
+                font-size: 12px;
+                padding: 12px;
+            }
+
+            .example-card {
+                width: 100%;
+            }
+
+            .front img {
+                width: 25px;
+                margin-bottom: 5px;
+            }
+
+            .front h4 {
+                font-size: 0.9rem;
+            }
+
+            .grid {
+                grid-template-columns: repeat(5, 50px);
+                gap: 5px;
+
+            }
+
+            .cell {
+
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
+            }
+
+            #startBtn,
+            #resetBtn {
+
+                width: 100%;
+                margin-top: 15px;
+                padding: 12px;
+
+                font-size: 16px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card h3 {
+
+                font-size: 18px;
+
+            }
+
+            .card span {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="logo"><img class="logoHome" src="../images/AILablogo.png" alt="A descriptive summary of the image">
+            AI Lab</div>
+        <div class="hideMenu">
+            <div class="menu" id="menu-toggle">
+                menu
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../aiIntro.html">AI</a></li>
+                <li><a href="../machineLearning.html">ML Projects</a></li>
+                <li><a href="../workshop.html">Workshops</a></li>
+                <li><a href="../challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+         <div>
+            <button id="logout-btn" onclick="logoutUser()"
+                style="padding: 10px 20px; background-color: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <section class="fadeSection" style="margin-top: 0%;">
+        <section class="mlHeader">
+            <h1 class="main-ml-title">Reinforcement Learning</h1>
+            <div class="title-divider"></div>
+            <h2 class="sub-ml-title">Example ML Projects</h2>
+        </section>
+    </section>
+
+
+    <h1 class="fadeSection" style="color:lightblue; ">What is Reinforcement Learning</h1>
+    <p style="font-size: large;">
+        Reinforcement Learning (RL) is a machine learning technique where an intelligent agent learns by interacting
+        with an environment.
+        Instead of being given the correct answer,
+        the agent performs actions and receives rewards or penalties.
+        Over time, it improves its decision-making to maximize the total reward and discover the optimal strategy.
+    </p>
+
+
+
+    <section class="fadeSection">
+        <h3> The 5 main component in Reinforcement Learning: </h3>
+        <div class="mainComponentRL">
+            <div class="bubbleSquare">
+                <h5>Agent</h5>
+            </div>
+            <div class="bubbleSquare">
+                <h5>State</h5>
+            </div>
+            <div class="bubbleSquare">
+                <h5>Action</h5>
+            </div>
+            <div class="bubbleSquare">
+                <h5>Environment</h5>
+            </div>
+            <div class="bubbleSquare">
+                <h5>Reward</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="fadeSection">
+        <section class="rlFlow">
+            <h3 style="margin-bottom: 10%; margin-top: 10%;">How Reinforcement Learning Cycle</h3>
+            <div class="flow">
+                <div class="bubbleSquare">
+                    <div class="front">
+                        <img src="../images/MLimages/reinforcement/aiAgent.png" alt="aiAgent.png">
+                        <h4>Agent</h4>
+                    </div>
+                    <div class="back">
+                        <p>
+                            The agent observe the state (current situation).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arrow">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </div>
+
+                <div class="bubbleSquare">
+                    <div class="front">
+                        <img src="../images/MLimages/reinforcement/action.png" alt="action.png">
+                        <h4>Take Action</h4>
+                    </div>
+                    <div class="back">
+                        <p>
+                            The agent interacts with the environment by choosing action.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arrow">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </div>
+
+                <div class="bubbleSquare">
+                    <div class="front" style="word-break: break-all;">
+                        <img src="../images/MLimages/reinforcement/envrionment.png" alt="environment.png">
+                        <h4>Environment</h4>
+                    </div>
+                    <div class="back">
+                        <p>
+                            The world where the action takes place.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arrow">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </div>
+
+                <div class="bubbleSquare">
+                    <div class="front">
+                        <img src="../images/MLimages/reinforcement/reward.png" alt="reward.png">
+                        <h4>Reward</h4>
+                    </div>
+                    <div class="back">
+                        <p>
+                            Positive or negative feedback after each action.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="arrow">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </div>
+
+                <div class="bubbleSquare">
+                    <div class="front">
+                        <img src="../images/MLimages/reinforcement/updatePolicy.png" alt="UpdatePolicy.png">
+                        <h4>Update Policy</h4>
+                    </div>
+                    <div class="back">
+                        <p>
+                            The AI updates its strategy to gain higher future rewards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="fadeSection"
+        style="text-align: center; color:whitesmoke; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+        <h3>How does it function?</h3>
+        <h5 style="color:lightblue;">"Learning by Trial and Error"</h5>
+
+        <p>
+            Instead of learning from correct answers,
+            the AI learns by interacting with an environment,
+            receiving rewards and penalties until it discovers
+            the best strategy.
+        </p>
+    </section>
+    <hr style="color:#9c29f4">
+    <section class="fadeSection">
+        <section id="demoRL" class="rl-container">
+
+            <h2 style="margin-top: 10%;">🤖 Reinforcement Learning Demo</h2>
+
+            <p>Watch how the AI Agent calculate the best path by using its training result.</p>
+
+            <div id="grid" class="grid"></div>
+            <div class="infoPanel">
+                <div class="card">
+                    <h3>Episode</h3>
+                    <span id="episode">1</span>
+                    <p id="log">
+                        Waiting to train...
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Reward</h3>
+                    <span id="reward">0</span>
+                </div>
+                <div class="card">
+                    <h3>Steps</h3>
+                    <span id="steps">0</span>
+                </div>
+                <div class="card">
+                    <h3>Learning</h3>
+
+                    <div class="progressBar">
+                        <div id="progressFill"></div>
+                    </div>
+                    <span id="progressText">0%</span>
+                </div>
+            </div>
+
+            <button id="startBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M384.67-307.33 652-480 384.67-652.67v345.34ZM186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840h586.66q27 0 46.84 19.83Q840-800.33 840-773.33v586.66q0 27-19.83 46.84Q800.33-120 773.33-120H186.67Zm0-66.67h586.66v-586.66H186.67v586.66Zm0-586.66v586.66-586.66Z" />
+                </svg>
+                Start Learning
+            </button>
+
+            <button id="resetBtn" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                    fill="#e3e3e3">
+                    <path
+                        d="M480-160q-133.33 0-226.67-93.33Q160-346.67 160-480q0-133.33 93.33-226.67Q346.67-800 480-800q79.67 0 143.33 32.5 63.67 32.5 110 90.17V-800H800v262.67H537.33V-604h168q-36-58.67-93.83-94T480-733.33q-106 0-179.67 73.66Q226.67-586 226.67-480q0 106 73.66 179.67Q374-226.67 480-226.67q81 0 147.67-46.33 66.66-46.33 93-122.33H790Q761.33-290 675.33-225q-86 65-195.33 65Z" />
+                </svg>
+                Reset
+            </button>
+        </section>
+    </section>
+    <table class="advtable">
+        <thead>
+            <tr>
+                <th><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#75fbac">
+                        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                    </svg> Advantages</th>
+                <th><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#ea3323">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>Auto-Learning:</strong> The model learns by itself without needing human data.
+                </td>
+                <td>
+                    <strong>Massive Data:</strong> It needs millions of trials to learn a task.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Handles Change:</strong> It adapts easily to unpredictable and dynamic environments.
+                </td>
+                <td>
+                    <strong>Hard Rewards:</strong> Designing the scoring system is very difficult.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Constant Growth:</strong> The AI automatically improves its strategy over time.
+                </td>
+                <td>
+                    <strong>Slow Training:</strong> Finding the right solution takes a long time.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Game Expert:</strong> It excels at complex, multi-step tasks like gaming.
+                </td>
+                <td>
+                    <strong>Heavy Compute:</strong> Running simulations requires powerful and expensive computers.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <section class="examples-section">
+        <h3 style="text-align: center; margin:5%;">Other real life examples...</h3>
+
+        <div class="examples-grid">
+            <!-- Card 1 -->
+            <div class="example-card">
+                <div class="card-icon">🎮</div>
+                <h4>Video Games</h4>
+                <p>NPC learns how to defeat players.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="example-card">
+                <div class="card-icon">🚗</div>
+                <h4>Self-driving Cars</h4>
+                <p>Choose safest driving actions.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="example-card">
+                <div class="card-icon">🤖</div>
+                <h4>Robotics</h4>
+                <p>Robot learns how to walk.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="example-card">
+                <div class="card-icon">💰</div>
+                <h4>Stock Trading</h4>
+                <p>AI learns profitable trading strategies.</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="example-card">
+                <div class="card-icon">🏭</div>
+                <h4>Warehouse Robots</h4>
+                <p>Find shortest delivery route.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+            //to log out
+        function logoutUser() {
+            document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+            document.cookie = "email=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            alert("You have been logged out successfully.");
+            window.location.href = "../../index.html";
+        }
+
+
+        const grid = document.getElementById("grid");
+        const episodeText = document.getElementById("episode");
+        const rewardText = document.getElementById("reward");
+        const stepText = document.getElementById("steps");
+        const progressFill = document.getElementById("progressFill");
+        const progressText = document.getElementById("progressText");
+        const log = document.getElementById("log");
+        const startBtn = document.getElementById("startBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const rows = 5;
+        const cols = 5;
+        const walls = [
+            7,
+            12
+        ];
+        const goal = 9;
+
+        let episode = 1;
+        let reward = 0;
+        let steps = 0;
+        let progress = 0;
+
+        //represent exploration
+        let path1 = [
+            0,
+            5,
+            10,
+            5,
+            6,
+            7,
+            12,
+            17,
+            18,
+            13,
+            8,
+            9,
+        ];
+        let path2 = [
+            0,
+            1,
+            2,
+            1,
+            2,
+            3,
+            4,
+            9
+        ];
+        let path3 = [
+            0,
+            1,
+            2,
+            3,
+            4,
+            9
+        ];
+
+        // Final learned path
+        const bestPath = [
+            0, 1, 2, 3, 4, 9
+        ];
+
+
+        function draw(position, learned = []) {
+
+            grid.innerHTML = "";
+
+            for (let i = 0; i < 25; i++) {
+
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+
+                if (learned.includes(i)) {
+                    cell.classList.add("bestPath");
+                }
+
+                if (walls.includes(i))
+                    cell.classList.add("wall");
+
+                if (i == goal) {
+                    cell.classList.add("goal");
+                    cell.innerHTML = "🏆";
+                }
+
+                if (i == position) {
+                    cell.classList.add("agent");
+                    cell.innerHTML = "😀";
+                }
+
+                grid.appendChild(cell);
+
+            }
+
+        }
+
+        async function play(path) {
+            reward = 0;
+            steps = 0;
+
+            for (let i = 0; i < path.length; i++) {
+                if (walls.includes(path[i])) {
+                    log.innerHTML =
+                        "❌ Hit an obstacle. Negative reward received.";
+                }
+                else if (path[i] == goal) {
+                    log.innerHTML =
+                        "🏆 Goal reached! Positive reward received.";
+                }
+                else {
+                    log.innerHTML =
+                        "➡ Exploring state " + path[i];
+                }
+                draw(path[i]);
+
+                steps++;
+
+                stepText.innerHTML = steps;
+
+                if (i > 0) {
+
+                    const current = path[i];
+
+                    if (walls.includes(current)) {
+                        reward -= 20;
+                    }
+                    else if (current == goal) {
+                        reward += 100;
+                    }
+                    else {
+                        reward -= 1;
+                    }
+                }
+
+                rewardText.innerHTML = reward;
+
+                await new Promise(r => setTimeout(r, 700));
+
+            }
+
+            episode++;
+            episodeText.innerHTML = episode;
+            progress = (episode - 1) / 3 * 100;
+            progressFill.style.width = progress + "%";
+            progressText.innerHTML = Math.round(progress) + "%";
+        }
+
+        async function start() {
+
+            startBtn.disabled = true;
+            resetBtn.disabled = false;
+
+            episode = 1;
+            progress = 0;
+
+            episodeText.innerHTML = 1;
+            progressFill.style.width = "0%";
+            progressText.innerHTML = "0%";
+
+            await play(path1);   // First episode
+            await play(path2);
+            await play(path3);
+            rewardText.innerHTML = "100";
+
+            draw(goal, bestPath);
+
+
+            setTimeout(function () {
+
+                alert(
+                    "🎉 Goal Reached!\n\n" +
+                    "The AI has successfully learned the optimal path.\n" +
+                    "The highlighted cells show the best route discovered after training."
+                );
+
+            }, 500);
+
+            resetBtn.onclick = resetDemo;
+
+        }
+
+        function resetDemo() {
+
+            episode = 1;
+            reward = 0;
+            steps = 0;
+            progress = 0;
+
+            episodeText.innerHTML = "1";
+            rewardText.innerHTML = "0";
+            stepText.innerHTML = "0";
+
+            progressFill.style.width = "0%";
+            progressText.innerHTML = "0%";
+
+            log.innerHTML = "Waiting...";
+
+            startBtn.disabled = false;
+            resetBtn.disabled = true;
+
+            draw(0);
+
+            startBtn.onclick = start;
+
+        }
+        draw(0);
+        startBtn.onclick = start;
+
+
+    </script>
+
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="../images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+        <!--quick Link-->
+        <div class="footCol">
+
+            <h3>Quick Links</h3>
+            <ul class="footerLinks">
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li><a href="../aiIntro.html">AI</a></li>
+                <li><a href="../machineLearning.html">ML Projects</a></li>
+                <li><a href="../workshop.html">Workshops</a></li>
+                <li><a href="../challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            Ai Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User mahy browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script src="../headerFooter.js"></script>
+</body>
+
+</html>

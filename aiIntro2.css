@@ -1,0 +1,671 @@
+/* ================================================
+   GLOBAL SETTINGS
+================================================ */
+* {
+    font-family: "Montserrat", sans-serif;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+html {
+    scroll-behavior: smooth;}
+
+body {
+    background: #050816;
+    color: white;}
+
+/* ================================================
+   AI IMPACT SECTION
+================================================ */
+#aiImpact {
+    width: 90%;
+    margin: auto;
+    padding: 100px 0;
+    text-align: center;}
+
+#aiImpact h3 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 60px;}
+
+/* ================================================
+   BENEFIT SLIDER
+================================================ */
+.benefitSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;}
+
+.benefitWindow {
+    width: 940px;
+    overflow: hidden;
+    padding: 20px 50px;
+    box-sizing: border-box;}
+
+.benefitTrack {
+    display: flex;
+    transition: .8s ease;}
+
+/* ================================================
+   BENEFIT CARDS
+================================================ */
+.benefit {
+    min-width: 270px;
+    margin: 0 15px;}
+
+.benefitContent {
+    padding: 30px;
+    background: rgba(255, 255, 255, .08);
+    border: 2px solid #3B82F6;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, .4);
+    animation:
+        floatBenefit 5s ease-in-out infinite,
+        benefitGlow 8s linear infinite;
+    transition: .4s;}
+
+@keyframes floatBenefit {
+    0%,
+    100% {
+        transform: translateY(0);}
+    50% {
+        transform: translateY(-6px);}}
+
+@keyframes benefitGlow {
+    0% {
+        border-color: #3B82F6;
+        box-shadow: 0 0 15px #3B82F6;}
+    25% {
+        border-color: #8B5CF6;
+        box-shadow: 0 0 20px #8B5CF6;}
+    50% {
+        border-color: #06B6D4;
+        box-shadow: 0 0 20px #06B6D4;}
+    75% {
+        border-color: #22C55E;
+        box-shadow: 0 0 20px #22C55E;}
+    100% {
+        border-color: #3B82F6;
+        box-shadow: 0 0 15px #3B82F6;}}
+
+.benefitContent:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, .15);}
+
+/* ================================================
+   SLIDER BUTTONS
+================================================ */
+.prevBtn,
+.nextBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #3B82F6;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 20px #3B82F6;}
+
+/* ================================================
+   DOTS
+================================================ */
+.dots {
+    margin-top: 40px;}
+
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    margin: 10px;
+    opacity: .5;}
+
+.dots .active {
+    opacity: 1;
+    background: #3B82F6;
+    box-shadow:
+        0 0 15px #3B82F6;}
+
+/* ================================================
+   AI INNOVATORS SECTION
+================================================ */
+#innovators {
+    width: 90%;
+    margin: auto;
+    padding: 100px 0;
+    color: white;}
+
+.AiInnovators h3 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 70px;}
+
+/* ================================================
+   INNOVATOR CARDS
+================================================ */
+.innovator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 40px 40px 40px 120px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(12px);
+    border: 2px solid #3B82F6;
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, .4);
+    overflow: visible;
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity .8s,
+        transform .4s,
+        box-shadow .4s;}
+/* scroll reveal */
+.innovator.show {
+    opacity: 1;
+    transform: translateY(0);}
+
+/* floating */
+.innovator:nth-child(2) {
+    animation: floatInnovator 5s ease-in-out infinite;}
+
+.innovator:nth-child(3) {
+    animation: floatInnovator 6s ease-in-out infinite;}
+
+.innovator:nth-child(4) {
+    animation: floatInnovator 7s ease-in-out infinite;}
+
+@keyframes floatInnovator {
+    0%,
+    100% {
+        transform: translateY(0);}
+    50% {
+        transform: translateY(-8px);}}
+
+/* animated border */
+.innovator {
+    animation-name: borderInnovator;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;}
+
+@keyframes borderInnovator {
+    0% {
+        border-color: #3B82F6;
+        box-shadow:
+            0 0 15px #3B82F6;}
+    25% {
+        border-color: #8B5CF6;
+        box-shadow:
+            0 0 25px #8B5CF6;}
+    50% {
+        border-color: #06B6D4;
+        box-shadow:
+            0 0 25px #06B6D4;}
+    75% {
+        border-color: #22C55E;
+        box-shadow:
+            0 0 25px #22C55E;}
+    100% {
+        border-color: #3B82F6;
+        box-shadow:
+            0 0 15px #3B82F6;}}
+
+/* hover */
+.innovator:hover {
+    transform:
+        translateY(-10px) scale(1.03);
+    box-shadow:
+        0 0 40px #8B5CF6;}
+
+/* ================================================
+   SHINE EFFECT
+================================================ */
+.innovator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent);
+    transition: .8s;}
+
+.innovator:hover::after {
+    left: 140%;}
+
+/* ================================================
+   PROFILE IMAGE
+================================================ */
+.avatarContainer {
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3B82F6;
+    background: black;
+    box-shadow:
+        0 0 15px #3B82F6,
+        0 0 30px rgba(139, 92, 246, .5);
+    transition: .5s;}
+
+.innovator:hover .avatar {
+    transform:
+        scale(1.08) rotate(5deg);
+    border-color: #8B5CF6;
+    box-shadow:
+        0 0 25px #8B5CF6,
+        0 0 40px #06B6D4;}
+
+/* ================================================
+   TEXT
+================================================ */
+.content h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;}
+
+.content h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 70px;
+    height: 3px;
+    border-radius: 5px;
+    background:
+        linear-gradient(90deg,
+            #3B82F6,
+            #8B5CF6);}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;}
+
+/* ================================================
+   FUTURE OF AI TIMELINE
+================================================ */
+#future {
+    width: 90%;
+    margin: auto;
+    padding: 120px 0;
+    color: white;}
+
+.futureOfAi h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 80px;}
+
+.aiTimeline {
+    position: relative;
+    width: 900px;
+    max-width: 100%;
+    margin: auto;}
+
+/* glowing center line */
+.aiTimeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+    background:
+        linear-gradient(#3B82F6,
+            #8B5CF6,
+            #06B6D4);
+    box-shadow:
+        0 0 20px #3B82F6;}
+
+/* hidden state */
+.future {
+    position: relative;
+    width: 50%;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;}
+
+/* visible state after scrolling */
+.future.show {
+    opacity: 1;
+    transform: translateY(0);}
+
+.future:nth-child(odd) {
+    left: 0;
+    text-align: center;}
+
+.future:nth-child(even) {
+    left: 50%;
+    text-align: center;}
+
+/* timeline dots */
+.futureNode {
+    position: absolute;
+    top: 40px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3B82F6;
+    box-shadow:
+        0 0 15px #3B82F6,
+        0 0 35px #8B5CF6;}
+
+.future:nth-child(odd) .futureNode {
+    right: -12px;}
+
+.future:nth-child(even) .futureNode {
+    left: -12px;}
+
+/* future glass cards */
+.futureContent {
+    padding: 30px;
+    background:
+        rgba(255, 255, 255, .08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid #3B82F6;
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, .4);
+    transition: .4s;}
+
+.futureContent:hover {
+    transform: scale(1.05);
+    border-color: #8B5CF6;
+    box-shadow:
+        0 0 35px #8B5CF6;}
+
+.futureContent h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;}
+
+.futureContent p {
+    line-height: 1.7;}
+
+/* ================================================
+   AI JOURNEY INTRO
+================================================ */
+#aiJourney {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;}
+
+.journeyIntro h1 {
+    font-size: 5rem;
+    background:
+        linear-gradient(90deg,
+            #3B82F6,
+            #8B5CF6,
+            #06B6D4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;}
+
+.journeyIntro p {
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 1.4rem;
+    color: #ddd;}
+
+.journeyNodes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;}
+
+.journeyNode {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    background:
+        rgba(255, 255, 255, .08);
+    border: 2px solid #3B82F6;
+    box-shadow:
+        0 0 25px #3B82F6;
+    transition: .4s;}
+
+.journeyNode:hover {
+    transform: scale(1.15);
+    box-shadow:
+        0 0 45px #8B5CF6;}
+
+.journeyNode span {
+    color: #06B6D4;
+    font-size: 1.2rem;}
+
+/* fixed circle text size */
+#aiJourney .journeyNode h3 {
+    font-size: 1.2rem;
+    max-width: 130px;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;}
+
+.line {
+    width: 130px;
+    height: 3px;
+    background:
+        linear-gradient(90deg,
+            #3B82F6,
+            #8B5CF6);
+    box-shadow:
+        0 0 15px #3B82F6;}
+
+.scrollText {
+    margin-top: 70px;
+    color: #3B82F6;
+    animation:
+        scrollBounce 2s infinite;}
+
+@keyframes scrollBounce {
+    50% {
+        transform: translateY(15px);}}
+
+/* ================================================
+   MOBILE RESPONSIVE
+================================================ */
+@media(max-width:900px) {
+
+    .benefitSlider {
+        flex-direction: column;}
+
+    .benefitWindow {
+        width: 100%;}
+
+    .innovator {
+        padding-left: 40px;
+        padding-top: 100px;
+        flex-direction: column;
+        text-align: center;}
+
+    .avatarContainer {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;}
+
+    .aiTimeline::before {
+        left: 20px;}
+
+    .future {
+        position: relative;
+        width: 50%;
+        padding: 30px;
+        opacity: 0;
+        transform: translateY(80px);
+        transition:
+            opacity 1s ease,
+            transform 1s ease;}
+
+    .future.show {
+        opacity: 1;
+        transform: translateY(0);}
+
+    .futureNode {
+        left: 8px !important;
+        right: auto;}
+
+    .journeyNodes {
+        flex-direction: column;
+        gap: 30px}
+
+    .line {
+        width: 3px;
+        height: 80px;}
+
+    .journeyIntro h1 {
+        font-size: 3rem;}}
+
+/*================================================
+    AI LEARNING PROGRESS TRACKER
+================================================*/
+.learningTracker {
+    position:fixed;
+    right:20px;
+    top:70%;
+    transform:translateY(-50%);
+    width:190px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(18,18,40,.6);
+    backdrop-filter:blur(15px);
+    border:2px solid #3B82F6;
+    box-shadow:
+    0 0 30px rgba(59,130,246,.5);
+    color:white;
+    z-index:1000;}
+
+
+.learningTracker h3 {
+    text-align: center;
+    color: #80D8FF;
+    text-shadow:
+        0 0 10px #3B82F6;}
+
+.progressStep {
+    margin: 25px 0;
+    color: #D9E4F5;
+    font-size: .95rem;
+    transition: .3s;}
+
+.progressStep.completed {
+    color: #00FF99;
+    text-shadow:
+        0 0 10px #00FF99;}
+
+.progressPercent {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;}
+
+/* ================================================
+   QUIZ CALL TO ACTION
+================================================ */
+#quizCTA {
+    width: 90%;
+    margin: auto;
+    padding: 120px 0;
+    text-align: center;}
+
+.quizContainer {
+    max-width: 800px;
+    margin: auto;
+    padding: 60px 40px;
+    border: 2px solid #3B82F6;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(59, 130, 246, .4);
+    transition: .4s;}
+
+.quizContainer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px #8B5CF6;}
+
+.quizContainer h2{
+    font-size:3rem;
+    margin-bottom:25px;
+    background:
+    linear-gradient(
+        90deg,
+        #3B82F6,
+        #8B5CF6,
+        #06B6D4);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;}
+
+.quizContainer p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #dddddd;
+    margin-bottom: 20px;}
+
+.quizButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: #3B82F6;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: .3s;
+    box-shadow: 0 0 20px rgba(59, 130, 246, .5);}
+
+.quizButton:hover {
+    transform: scale(1.08);
+    background: #8B5CF6;
+    box-shadow: 0 0 30px #8B5CF6;}
+
+#quizCTA {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: 1s;}
+
+#quizCTA.show {
+    opacity: 1;
+    transform: translateY(0);}

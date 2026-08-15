@@ -1,0 +1,174 @@
+<!DOCTYPE ht>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="myIndex.css">
+    <link rel="stylesheet" href="quiz.css">
+    <title>AI Knowledge Challenge</title>
+</head>
+
+<body>
+    <div class="nav-trigger">
+        <nav class="navbar">
+            <div class="logo"><img class="logoHome" src="./images/AILablogo.png"
+                    alt="A descriptive summary of the image">
+                AI Lab</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <!--content-->
+    <section id="quiz">
+        <div class="quizIntro">
+            <h1>🧠 AI Knowledge Challenge</h1>
+            <p>
+                Test your understanding of Artificial Intelligence
+                and discover how much you have learned.
+            </p>
+        </div>
+
+        <div class="quizContainer">
+            <div class="quizProgress">
+                Question <span id="questionNumber">1</span> / 10
+            </div>
+
+            <div class="question">
+
+                <h2 id="questionText">
+                    Question will appear here
+                </h2>
+            </div>
+
+            <div class="answers">
+                <button class="answer">
+                    Answer A
+                </button>
+
+                <button class="answer">
+                    Answer B
+                </button>
+
+                <button class="answer">
+                    Answer C
+                </button>
+
+                <button class="answer">
+                    Answer D
+                </button>
+            </div>
+
+            <button id="nextButton">
+                Next Question
+            </button>
+        </div>
+
+        <!-- Result (hidden first) -->
+        <div class="resultContainer">
+            <h2>
+                🎉 Quiz Completed!
+            </h2>
+            <p>
+                Your Score:
+                <span id="score">
+                    0
+                </span>/10
+            </p>
+            <p>
+                Highest Score:
+                <span id="highestScore">
+                    0
+                </span>
+            </p>
+            <p>
+                Attempts:
+                <span id="attempts">
+                    0
+                </span>
+            </p>
+            <h3 id="badge"></h3>
+            <button id="retryButton">
+                Try Again
+            </button>
+            <a href="aiIntro2.html">
+                Back to AI Journey
+            </a>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+        <!--quick Link-->
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            Ai Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User may browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script src="headerFooter.js"></script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

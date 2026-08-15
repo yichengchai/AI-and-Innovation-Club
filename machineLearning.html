@@ -1,0 +1,414 @@
+<!DOCTYPE ht>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--nunito-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <title>Machine Learning Projects</title>
+    <style>
+        #Work>.cardProcess {
+
+            backdrop-filter: blur(10px);
+            background-color: #1703462d;
+            width: auto;
+            height: auto;
+
+            padding: 5%;
+            border: 2px solid #3B82F6;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(15, 61, 135, 0.7);
+        }
+
+        body {
+            background: #090b18;
+            font-family: "Nunito", sans-serif;
+        }
+
+        .welcomeML {
+            font-family: "Gelasio", sans-serif;
+        }
+
+        footer {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @media screen and (max-width:768x) {
+
+            #MLimghead {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                background-size: 20%;
+                margin-top: 0px;
+            }
+
+            .card-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .realWorld-card h3 {
+                font-size: 22px;
+            }
+
+            .realWorld-card em {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="logo"><img class="logoHome" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+            AI Lab</div>
+        <div class="hideMenu">
+            <div class="menu" id="menu-toggle">
+                menu
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div>
+            <button id="logout-btn" onclick="logoutUser()"
+                style="padding: 12px 20px; background-color: #dc2626; font-size: medium; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <section class="mlHeader">
+        <h1 class="main-ml-title">Machine Learning</h1>
+        <div class="title-divider"></div>
+        <h2 class="sub-ml-title">Introduction of Machine Learning</h2>
+    </section>
+
+    <section class="welcomeML" style="margin:0px 0px 0px 0px;">
+        <div class="hidden-text">
+            <br><br><br>
+            MACHINE<br>
+            LEARNING
+        </div>
+    </section>
+
+    <br>
+    <section class="fadeSection">
+        <section id="introMLcontent">
+            <section style="margin:40px 40px;">
+                <p>
+                    Machine Learning (ML) is a branch of Artificial Intelligence that enables computers to learn from
+                    data
+                    and improve
+                    their performance without relying on explicit programming instrcutions for every task.
+                </p>
+                <br>
+                <div style="border: 2px solid #be3bf6; border-radius: 20px; padding:20px;">
+                    <h2 style="text-align: center;">How does work?</h2>
+                    <br>
+                    <p>
+                        Machine Learning defines the pattern in training data to discover patterns and relationship
+                        between
+                        different pieces of instruction.
+                    </p>
+                    <p>
+                        After learning those patterns, machine learning models can make prediction or decision when it
+                        is
+                        encountered
+                        with new information.
+                        Unlike traditional programming,its improves its accurancy through experience and continuous
+                        learning.
+                    </p>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- information from : https://www.google.com/search?sca_esv=114ce2f88324942a&rlz=1C1VDKB_enMY1057MY1057&sxsrf=APpeQntlmvk0M7VFchrXO92TDqG9QAJyfQ:1784035008944&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832cSpkWkfSwsmpNIrD_OQ-UdFAe4qAwsQWVbrtprjzBSpjDzGa2iAzCYjz69Mu1iWx5JLOl50t5qBV3goRnZyU0HpYNOi1HqTyAn13XZd6Wy-GF3LX3YycJ0fSfFnrOH8i9CB7P_ugsFO2PVJ_QJ-_6kH70QZ2ha6wkSz9USmEEw6RiuezA&q=machine+learning+training+process&sa=X&ved=2ahUKEwjL9eWnoNKVAxU8T2cHHY_CJmIQtKgLegQIFxAB&biw=786&bih=706&dpr=1.25#sv=CAMSURoyKhBlLWlTTko4UGQzT2xrTV9NMg5pU05KOFBkM09sa01fTToON2h4MVpidkwyeV82bk0gBCoXCgFzEhBlLWlTTko4UGQzT2xrTV9NGAEwARgHIMuk0MADSggQARgBIAEoAQ-->
+    <!-- may have something need for there? https://towardsdatascience.com/every-step-of-the-machine-learning-life-cycle-simply-explained-d1bca7c1772f/-->
+    <br>
+    <section class="fadeSection">
+        <section class="cardProcess">
+            <h2 style="text-align: center;">Machine Learning Training Process</h2>
+            <br>
+            <div class="card-container">
+                <div class="process-card">
+                    <img src="./images/MLimages/dataCollection.jpg" width="250px" height="130px"
+                        alt="Data Collection.png">
+                    <h3>Step 1: Data Collection</h3>
+                    <p>Source & quality</p>
+                </div>
+
+                <div class="process-card" style="background: rgba(255,255,255,0.65); color:#190646d0">
+                    <img src="./images/MLimages/dataPreparation.jpg" width="250px" height="130px"
+                        alt="Data Preparation.png">
+                    <h3>Step 2: Data Preparation</h3>
+                    <p>Clean & transform</p>
+                </div>
+
+                <div class="process-card">
+                    <img class="imgML" src="./images/MLimages/modelSelection.jpg" width="250px" height="130px"
+                        alt="Model Selection.png">
+                    <h3>Step 3: Model Selection</h3>
+                    <p>Algorithm Choice</p>
+                </div>
+                <div class="process-card" style="background: rgba(255,255,255,0.65); color:#190646d0">
+                    <img class="imgML" src="./images/MLimages/modelTraining.jpg" width="250px" height="130px"
+                        alt="Model Training.png">
+                    <h3>Step 4: Model Training</h3>
+                    <p>Learning Process</p>
+                </div>
+                <div class="process-card">
+                    <img class="imgML" src="./images/MLimages/modelEvaluation.jpg" width="250px" height="130px"
+                        alt="Model Evaluation.png">
+                    <h3>Step 5: Model Evaluation</h3>
+                    <p>Test Performance</p>
+                </div>
+                <div class="process-card" style="background: rgba(255,255,255,0.65); color:#190646d0">
+                    <img class="imgML" src="./images/MLimages/modelImprovement.jpg" alt="Model Improvement.png">
+                    <h3>Step 6: Model Improvement</h3>
+                    <p>Fine-tune & Optimize</p>
+                </div>
+                <div class="process-card">
+                    <img class="imgML" src="./images/MLimages/deployment.jpg" width="250px" height="130px"
+                        alt="Deployment.png">
+                    <h3>Step 7: Deployment</h3>
+                    <p> Deployment & inference</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="cardRealWorld">
+        <h2>Real World Applications Machine Learning</h2>
+        <p>
+            Today, machine learning plays an important role...
+        </p>
+        <br><br>
+        <div class="slidertrack">
+            <div class="realWorld-card">
+                <h3>Recommendation</h3>
+                <em>Netflix, YouTube, Spotify</em>
+            </div>
+
+            <div class="realWorld-card">
+                <h3>Healthcare</h3>
+                <em>Disease Detection & Diagnosis</em>
+            </div>
+            <div class="realWorld-card">
+                <h3>Self-driving cars</h3>
+                <em>Object Detection & Navigation</em>
+            </div>
+
+            <div class="realWorld-card">
+                <h3>Fraud Detection</h3>
+                <em>Identify Suspicious Transactions</em>
+            </div>
+
+            <div class="realWorld-card">
+                <h3>ChatBots and LLM</h3>
+                <em>Virtual Assisteants & AI Chat</em>
+            </div>
+
+            <div class="realWorld-card">
+                <h3>Forcasting</h3>
+                <em>Predict Sales & Weather Trends</em>
+            </div>
+            <!--dupicate for loop-->
+            <div class="realWorld-card">
+                <h3>Recommendation</h3>
+                <em>Netflix, YouTube, Spotify</em>
+            </div>
+            <div class="realWorld-card">
+                <h3>Healthcare</h3>
+                <em>Disease Detection & Diagnosis</em>
+            </div>
+            <div class="realWorld-card">
+                <h3>Self-driving cars</h3>
+                <em>Object Detection & Navigation</em>
+            </div>
+            <div class="realWorld-card">
+                <h3>Fraud Detection</h3>
+                <em>Identify Suspicious Transactions</em>
+            </div>
+            <div class="realWorld-card">
+                <h3>ChatBots and LLM</h3>
+                <em>Virtual Assisteants & AI Chat</em>
+            </div>
+            <div class="realWorld-card">
+                <h3>Forcasting</h3>
+                <em>Predict Sales & Weather Trends</em>
+            </div>
+        </div>
+    </section>
+
+    <section class="fadeSection">
+        <h2 style="text-align: center;">Explore Machine Learning Types</h2>
+        <br>
+        <p style="text-align: center;"><em>(Click the title to know thier introduction!)</em></ p>
+
+        <section id="typeML">
+            <div class="MLcard-container">
+                <div id="supervised" class="opencard">
+                    <h2>Supervised Learning</h2>
+                    <br>
+                    <a class="TypeMLLinks" href="./ML/supervisedML.html">Learn More</a>
+                    <ul class="introtypeML">
+                        <li>
+                            model learn from labeled data, where target output is known.
+                        </li>
+                        <li>Application: </li>
+                        <li>risk assessment, image recognition, predictive analytics and fraud detection, comprises
+                            several
+                            types of algorithms.</li>
+
+                        <li>ML project : hourse price prediction, medical insurance cost prediction, spam email
+                            detection.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MLcard-container">
+                <div id="unsupervised" class="opencard">
+                    <h2>Unsupervised Learning</h2>
+                    <br>
+                    <a class="TypeMLLinks" href="./ML/unsupervisedML.html">Learn More</a>
+                    <ul class="introtypeML">
+                        <li>learn patterns from unlabelled data without knowing the correct answer/output. </li>
+                        <li>Application: clustering , pattern recognition and recommendation system, anomally detection
+                        </li>
+                        <li>example: customer segmentation, movie recommendation, product recommendation.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MLcard-container">
+                <div id="reinforcement" class="opencard">
+                    <h2>Reinforcement Learning</h2>
+                    <br>
+                    <a class="TypeMLLinks" href="./ML/reinforcementML.html">Learn More</a>
+                    <ul class="introtypeML">
+                        <li>learning from human feedback (RLHF), type of dynamic programming that trains algorithms
+                            using a
+                            system of reward and penalties by interacting with an environment.
+                            <br>Rewards will encourage agent to maintain the good practice and throw the bad ones.
+                        </li>
+                        <li>The agent repeats the action and gradually to learn best strategy.</li>
+                        <li>Application: video game development, robot control, self driving car.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footCol">
+            <div class="logoLayout">
+                <img class="logoFoot" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+                <h2 id="LogoName">AI Lab</h2>
+            </div>
+
+            <p class="footDesc">
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
+                AI Lab is an educational website that introduces AI,
+                Machine Learning, Prompt Engineering and Innovation Challenges.
+                <br>
+            </p>
+        </div>
+        <!--quick Link-->
+        <div class="footCol">
+
+            <h3>Quick Links</h3>
+            <ul class="footerLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div class="footCol">
+            <h3>Contact Us</h3>
+            <p>group16@ailab.com</p>
+            <p>GitHub</p>
+            <p>UTAR Kampar Campus</p>
+        </div>
+
+        <div class="footCol">
+            <h3>Copyrights</h3>
+            <p>
+                &copy;
+                2026 AI Lab | Developed by Group 16
+            </p>
+            <div class="footPolicy">
+                <button class="footerBtn" id="privacyLink">Privacy Policy</button>
+                |
+                <button class="footerBtn" id="termLink">Term of Use</button>
+            </div>
+            <div class="backToTop">
+                <a href="#">Back To Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Pop up message for policy terms cookie-->
+    <div id="policyModel" class="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h2 id="modelTitle">Header:</h2>
+            <div id="modelBody">Content:</div>
+        </div>
+    </div>
+
+    <!--Pop up content(hidden) unless user click-->
+    <div id="privacyContent" style="display: none;">
+        <p>
+            AI Lab respect your privacy. This is only an education website.
+        </p>
+        <p>No password is collected.<br>
+            No payment information is stored. <br>
+            No personal information is shared.</p>
+    </div>
+
+    <div id="termContent" style="display: none;">
+        <p>
+            This website is developed for educational purpose. </p>
+        <p>User mahy browse freely. All the content is for learning purposes.</p>
+        <p>AI Lab is not responsible for the misuse.</p>
+    </div>
+
+    <script>
+        //to log out]
+        // Universal function to clear cookies from any subpage
+        function logoutUser() {
+            // Setting an expiration date in the past deletes the cookies site-wide (path=/)
+            document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+            document.cookie = "email=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            alert("You have been logged out successfully.");
+
+            // Redirects the user instantly back to the homepage to log in again
+            window.location.href = "index.html";
+        }
+
+
+    </script>
+    <script src="headerFooter.js"></script>
+</body>
+
+</html>
