@@ -487,274 +487,1051 @@
   text-decoration: none;
 }
 
+/* =========================================================
+   RESPONSIVE DESIGN
+   TABLET + MOBILE
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   992px and below
+========================================================= */
+
 @media (max-width: 992px) {
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
   .challengeHero {
-    flex-direction: column;
-    padding: 120px 20px 60px;
     height: auto;
     min-height: 100vh;
+
+    padding: 130px 25px 70px;
+
+    display: flex;
+    flex-direction: column;
+
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+
+    gap: 45px;
+
+    text-align: center;
   }
 
   .heroContent {
-    text-align: center;
-    max-width: 100%;
-  }
+    width: 100%;
+    max-width: 650px;
 
-  .heroContent h1 {
-    font-size: 38px;
     text-align: center;
-    margin-top: 10px;
-  }
-
-  .heroContent p {
-    text-align: center;
-    font-size: 16px;
-    margin: 20px 0;
   }
 
   .seasonTag {
     display: block;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(42px, 7vw, 60px);
+
+    line-height: 1.05;
+
+    text-align: center;
+
+    margin: 10px 0 18px;
+  }
+
+  .heroContent h3 {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    color: #94a3b8;
+  }
+
+  .challengeHero p {
+    max-width: 600px;
+
+    margin: 20px auto 25px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
     text-align: center;
   }
 
   .heroBtn {
-    margin: 0 auto;
-    padding: 12px 30px;
+    padding: 13px 32px;
+
     font-size: 14px;
   }
 
+
+  /* =====================================================
+     HERO STATUS
+  ===================================================== */
+
   .heroStatus {
+    width: 100%;
+
+    display: flex;
+
     flex-direction: row;
+
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
 
-  .staCard {
-    width: 200px;
-    padding: 15px 10px;
-  }
+    align-items: stretch;
 
-  .staCard h2 {
-    font-size: 28px;
-  }
-
-  .staCard p {
-    font-size: 12px;
-  }
-
-  .challenge_intro {
-    grid-template-columns: 1fr;
-    padding: 40px 20px;
     gap: 20px;
   }
 
+  .staCard {
+    width: 190px;
+
+    padding: 22px 15px;
+
+    border-radius: 18px;
+  }
+
+  .staCard h2 {
+    font-size: 35px;
+  }
+
+  .staCard p {
+    font-size: 13px;
+
+    margin: 0;
+  }
+
+
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
+  .challenge_intro {
+    grid-template-columns: 1fr;
+
+    padding: 55px 25px;
+
+    gap: 25px;
+  }
+
   .infoCard {
-    padding: 30px 20px;
+    padding: 30px 25px;
+
+    border-radius: 22px;
+
+    text-align: left;
   }
 
   .infoCard h2 {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 23px;
+
+    margin-bottom: 18px;
   }
 
   .infoCard p {
-    font-size: 14px;
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+
+  /* =====================================================
+     CHALLENGE LIST TITLE
+  ===================================================== */
+
+  .challenge_list {
+    padding-top: 30px;
   }
 
   .challenge_list h1 {
-    font-size: 24px;
-    padding-top: 30px;
-    margin: 20px;
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    padding-top: 20px;
+
+    margin: 20px 25px;
   }
 
   .challenge_list h2 {
     font-size: 26px;
-    padding-top: 20px;
+
+    padding-top: 10px;
+
     margin: 20px;
   }
 
-  .carousel {
-    height: auto;
-    min-height: 400px;
-    padding: 20px 10px;
-    overflow: hidden;
+
+  /* =====================================================
+     VIEW ALL CHALLENGES
+  ===================================================== */
+
+  .challenge_list .text-center {
+    margin: 25px 0 !important;
   }
+
+
+  /* =====================================================
+     MOBILE STYLE CAROUSEL
+     
+     IMPORTANT:
+     We remove the 3D carousel on smaller screens.
+     Cards become horizontal scroll cards.
+  ===================================================== */
+
+  .carousel {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 430px;
+
+    padding: 30px 20px 50px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    perspective: none;
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbar Chrome / Edge / Safari */
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* =====================================================
+     CHALLENGE CONTAINER
+  ===================================================== */
 
   .challengeContainer {
-    width: 180px;
-    height: 300px;
+    width: auto;
+
+    height: auto;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 20px;
+
+    margin: 0;
+
+    transform: none !important;
+
+    transform-style: flat;
+
+    animation: none;
+
+    flex-shrink: 0;
   }
+
+  .challengeContainer:hover {
+    animation: none;
+  }
+
+
+  /* =====================================================
+     CHALLENGE CARD
+  ===================================================== */
 
   .challenge_card {
-    width: 180px;
-    height: 280px;
-    padding: 15px 12px;
-    overflow: hidden;
+
+    position: relative;
+
+    flex: 0 0 280px;
+
+    width: 280px;
+
+    height: 350px;
+
+    padding: 25px 22px;
+
+    border-radius: 24px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
+    align-items: center;
+
+    text-align: center;
+
+    transform: none !important;
+
+    transform-style: flat;
+
+    scroll-snap-align: center;
+
+    backface-visibility: visible;
+
+    -webkit-backface-visibility: visible;
+
+    overflow: hidden;
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
   }
 
-  .challenge_card:nth-child(1) {
-    transform: rotateY(0deg) translateZ(100px);
-  }
-  .challenge_card:nth-child(2) {
-    transform: rotateY(90deg) translateZ(100px);
-  }
-  .challenge_card:nth-child(3) {
-    transform: rotateY(180deg) translateZ(100px);
-  }
+
+  /* Remove original 3D positioning */
+
+  .challenge_card:nth-child(1),
+  .challenge_card:nth-child(2),
+  .challenge_card:nth-child(3),
   .challenge_card:nth-child(4) {
-    transform: rotateY(270deg) translateZ(100px);
+
+    transform: none !important;
   }
 
-  .challenge_card:nth-child(1):hover {
-    transform: rotateY(0deg) translateZ(100px) scale(1.1);
+
+  /* Remove the blur effect */
+
+  .challengeContainer:hover .challenge_card:not(:hover) {
+
+    opacity: 1;
+
+    filter: none;
   }
-  .challenge_card:nth-child(2):hover {
-    transform: rotateY(90deg) translateZ(100px) scale(1.1);
+
+
+  /* Card hover */
+
+  .challenge_card:hover {
+
+    transform: translateY(-8px) !important;
+
+    opacity: 1;
+
+    filter: none;
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+      0 0 25px rgba(59, 130, 246, 0.4),
+      0 0 50px rgba(139, 92, 246, 0.2);
   }
-  .challenge_card:nth-child(3):hover {
-    transform: rotateY(180deg) translateZ(100px) scale(1.1);
-  }
-  .challenge_card:nth-child(4):hover {
-    transform: rotateY(270deg) translateZ(100px) scale(1.1);
+
+
+  /* =====================================================
+     CARD CONTENT
+  ===================================================== */
+
+  .challenge_card h3 {
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    min-height: 50px;
+
+    margin-bottom: 8px;
   }
 
   .challenge_card p {
-    font-size: 10px;
-    margin: 4px 0;
-    line-height: 1.3;
-    word-wrap: break-word;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-height: 26px;
-  }
 
-  .challenge_card h3 {
-    font-size: 15px;
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 8px 0;
+
+    display: block;
+
+    overflow: visible;
+
+    text-overflow: unset;
+
+    -webkit-line-clamp: unset;
+
+    -webkit-box-orient: unset;
   }
 
   .challenge_card span {
-    padding: 10px;
+
+    padding: 8px 0;
+
     font-size: 14px;
   }
 
   .challenge_card button {
-    padding: 10px 25px;
+
+    padding: 11px 25px;
+
     font-size: 14px;
+
+    margin-top: 10px;
   }
 
+
+  /* =====================================================
+     WORKFLOW
+  ===================================================== */
+
   .challenge_workflow {
-    padding: 40px 20px;
+
+    padding: 60px 25px;
   }
 
   .challenge_workflow h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+
+    font-size: 32px;
+
+    margin-bottom: 35px;
   }
 
   .c_workflow_container {
+
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+
+    gap: 18px;
   }
 
   .c_workflow_card {
-    padding: 20px 15px;
+
+    padding: 25px 15px;
+
+    border-radius: 16px;
   }
 
   .number {
+
     font-size: 28px;
   }
 
   .c_workflow_card p {
+
     font-size: 14px;
   }
 
+
+  /* =====================================================
+     JOIN SECTION
+  ===================================================== */
+
   .joinSection {
-    min-height: 350px;
-    padding: 40px 20px;
+
+    min-height: 380px;
+
+    padding: 50px 25px;
+  }
+
+  .joinContent {
+
+    width: 100%;
+
+    max-width: 600px;
   }
 
   .joinContent h2 {
-    font-size: 32px;
+
+    font-size: 38px;
+
+    line-height: 1.2;
   }
 
   .joinContent p {
+
     font-size: 16px;
+
+    line-height: 1.6;
   }
 
   .joinContent button {
+
     padding: 14px 40px;
+
     font-size: 16px;
   }
 
   .decorateLine {
+
     display: none;
   }
+
 }
 
-@media (max-width: 768px) {
-  .heroContent h1 {
-    font-size: 32px;
-    list-style: 1.2;
+
+/* =========================================================
+   MOBILE
+   600px and below
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .challengeHero {
+
+    min-height: auto;
+
+    padding: 115px 20px 55px;
+
+    gap: 30px;
   }
 
+  .seasonTag {
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+  }
+
+  .heroContent h1 {
+
+    font-size: 40px;
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+
+    margin: 8px 0 15px;
+  }
+
+  .heroContent h3 {
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1.1px;
+
+    margin-top: 10px;
+  }
+
+  .challengeHero p {
+
+    max-width: 340px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 18px auto 22px;
+  }
+
+  .heroBtn {
+
+    padding: 12px 28px;
+
+    font-size: 13px;
+  }
+
+
+  /* =====================================================
+     STATUS CARDS
+  ===================================================== */
+
   .heroStatus {
-    flex-direction: column;
-    align-items: center;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
   }
 
   .staCard {
-    width: 180px;
+
+    width: 100%;
+
+    padding: 18px 8px;
+
+    border-radius: 16px;
   }
+
+  .staCard h2 {
+
+    font-size: 28px;
+  }
+
+  .staCard p {
+
+    font-size: 11px;
+
+    line-height: 1.4;
+  }
+
+
+  /* =====================================================
+     INTRO CARDS
+  ===================================================== */
 
   .challenge_intro {
-    grid-template-columns: 1fr;
+
+    padding: 35px 18px;
+
+    gap: 16px;
   }
+
+  .infoCard {
+
+    padding: 25px 22px;
+
+    border-radius: 18px;
+
+    text-align: left;
+  }
+
+  .infoCard h2 {
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    margin-bottom: 12px;
+  }
+
+  .infoCard p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* =====================================================
+     CHALLENGE SECTION TITLE
+  ===================================================== */
+
+  .challenge_list {
+
+    padding-top: 15px;
+  }
+
+  .challenge_list h1 {
+
+    font-size: 22px;
+
+    line-height: 1.4;
+
+    margin: 20px 18px;
+
+    padding-top: 15px;
+  }
+
+  .challenge_list h2 {
+
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    margin: 15px 18px;
+
+    padding-top: 5px;
+  }
+
+
+  /* =====================================================
+     VIEW ALL
+  ===================================================== */
+
+  .challenge_list .text-center {
+
+    margin: 20px 0 !important;
+  }
+
+  .challenge_list .text-center a {
+
+    font-size: 14px !important;
+
+    gap: 8px !important;
+  }
+
+
+  /* =====================================================
+     CAROUSEL
+  ===================================================== */
 
   .carousel {
-    height: 350px;
+
+    min-height: 390px;
+
+    height: auto;
+
+    padding: 25px 18px 40px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
   }
+
+
+  /* =====================================================
+     CARD CONTAINER
+  ===================================================== */
 
   .challengeContainer {
-    width: 150px;
-    height: 250px;
+
+    gap: 16px;
+
+    width: auto;
+
+    height: auto;
+
+    animation: none;
+
+    transform: none !important;
   }
+
+
+  /* =====================================================
+     MOBILE CARD
+  ===================================================== */
 
   .challenge_card {
-    width: 150px;
-    height: auto;
+
+    flex: 0 0 260px;
+
+    width: 260px;
+
+    height: 330px;
+
+    padding: 24px 20px;
+
+    border-radius: 22px;
+
+    transform: none !important;
+
+    justify-content: space-between;
   }
 
-  .challenge_card:nth-child(1) {
-    transform: rotateY(0deg) translateZ(80px);
-  }
 
-  .challenge_card:nth-child(2) {
-    transform: rotateY(90deg) translateZ(80px);
-  }
-
-  .challenge_card:nth-child(3) {
-    transform: rotateY(180deg) translateZ(80px);
-  }
-
+  .challenge_card:nth-child(1),
+  .challenge_card:nth-child(2),
+  .challenge_card:nth-child(3),
   .challenge_card:nth-child(4) {
-    transform: rotateY(270deg) translateZ(80px);
+
+    transform: none !important;
+  }
+
+
+  /* =====================================================
+     CARD HOVER
+  ===================================================== */
+
+  .challenge_card:hover {
+
+    transform: translateY(-5px) !important;
+
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.35),
+      0 0 40px rgba(139, 92, 246, 0.2);
+  }
+
+
+  /* =====================================================
+     CARD TEXT
+  ===================================================== */
+
+  .challenge_card h3 {
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    min-height: 50px;
+  }
+
+  .challenge_card p {
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin: 6px 0;
+  }
+
+  .challenge_card span {
+
+    font-size: 13px;
+
+    padding: 6px 0;
   }
 
   .challenge_card button {
-    padding: 8px 12px;
-    font-size: 12px;
+
+    padding: 10px 24px;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+  }
+
+
+  /* =====================================================
+     WORKFLOW
+  ===================================================== */
+
+  .challenge_workflow {
+
+    padding: 45px 18px;
+  }
+
+  .challenge_workflow h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
   }
 
   .c_workflow_container {
-    grid-template-columns: 1fr;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .c_workflow_card {
+
+    padding: 20px 10px;
+
+    border-radius: 15px;
+  }
+
+  .number {
+
+    font-size: 25px;
+  }
+
+  .c_workflow_card p {
+
+    font-size: 12px;
+
+    line-height: 1.4;
+  }
+
+
+  /* =====================================================
+     JOIN SECTION
+  ===================================================== */
+
+  .joinSection {
+
+    min-height: 330px;
+
+    padding: 40px 20px;
+  }
+
+  .joinContent h2 {
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+  }
+
+  .joinContent p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+  }
+
+  .joinContent button {
+
+    padding: 13px 32px;
+
+    font-size: 14px;
+  }
+
+  .joinPeople {
+
+    font-size: 12px;
+
+    margin-top: 16px;
+  }
+
+  .decorateLine {
+
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   400px and below
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .challengeHero {
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .heroContent h1 {
+
+    font-size: 34px;
+  }
+
+  .heroContent h3 {
+
+    font-size: 9px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .challengeHero p {
+
+    font-size: 13px;
+  }
+
+  .staCard {
+
+    padding: 15px 6px;
+  }
+
+  .staCard h2 {
+
+    font-size: 25px;
+  }
+
+  .staCard p {
+
+    font-size: 10px;
+  }
+
+
+  .challenge_intro {
+
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .infoCard {
+
+    padding: 22px 18px;
+  }
+
+
+  .challenge_list h1 {
+
+    font-size: 20px;
+
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .challenge_list h2 {
+
+    font-size: 22px;
+  }
+
+
+  .carousel {
+
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .challenge_card {
+
+    flex: 0 0 245px;
+
+    width: 245px;
+
+    height: 320px;
+
+    padding: 22px 18px;
+  }
+
+  .challenge_card h3 {
+
+    font-size: 18px;
+  }
+
+  .challenge_card p {
+
+    font-size: 12px;
+  }
+
+  .challenge_card span {
+
+    font-size: 12px;
+  }
+
+  .challenge_card button {
+
+    font-size: 12px;
+
+    padding: 9px 20px;
+  }
+
+
+  .c_workflow_container {
+
+    gap: 10px;
+  }
+
+  .c_workflow_card {
+
+    padding: 18px 8px;
+  }
+
+  .number {
+    font-size: 23px;
+  }
+  .c_workflow_card p {
+    font-size: 11px;
+  }
+  .joinContent h2 {
+    font-size: 27px;
+  }
+  .joinContent p {
+    font-size: 13px;
   }
 }

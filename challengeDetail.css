@@ -212,8 +212,11 @@ body {
 }
 
 .description ul {
-  text-align: left;
-  padding-left: 220px;
+  width: fit-content;
+  margin: 0 auto;
+  padding-left: 0;
+  text-align: center;
+  list-style-position: inside;
 }
 
 .description p {
@@ -340,14 +343,24 @@ body {
     font-size: 15px;
     max-width: 90%;
   }
-
+  .detailHero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20px 120px;
+    gap: 20px;
+    line-height: normal;
+    text-align: center;
+  }
   .detailHero h1 {
     font-size: 28px;
+    order: 1;
   }
   .detailHero p {
     font-size: 16px !important;
     line-height: 35px !important;
     text-align: center;
+    order: 2;
   }
   .challengeTtl {
     font-size: 38px;
@@ -381,9 +394,6 @@ body {
   .description p,
   .description ul {
     font-size: 15px;
-  }
-  .description ul {
-    padding-left: 200px;
   }
   .submitSection {
     margin-top: 120px;
