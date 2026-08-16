@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="myIndex.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="workshop.css">
     <title>Register - AI Workshop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,26 +14,29 @@
 </head>
 
 <body>
-
-    <!--navigation bar-->
-    <div class="nav-trigger" id="top">
-        <nav class="navbar">
-            <div class="logo"><img class="logoHome" src="./images/AILablogo.png"
-                    alt="A descriptive summary of the image">
-                AI Lab
+    <nav class="navbar">
+        <div class="logo"><img class="logoHome" src="./images/AILablogo.png" alt="A descriptive summary of the image">
+            AI Lab</div>
+        <div class="hideMenu">
+            <div class="menu" id="menu-toggle" style="padding:9.5% 25px; font-size: 22px;" >
+                Menu
             </div>
-            <div class="hideMenu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="aiIntro.html">AI</a></li>
-                    <li><a href="machineLearning.html">ML Projects</a></li>
-                    <li><a href="workshop.html">Workshops</a></li>
-                    <li><a href="challenge.html">Challenges</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+        </div>
+        <div>
+            <button id="logout-btn" onclick="logoutUser()"
+                style="padding: 13.2px 20px; font-size:medium; background-color: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Logout
+            </button>
+        </div>
+    </nav>
 
     <section class="register" id="register">
         <div class="section-title">
@@ -182,18 +185,31 @@
             </div>
 
             <p class="footDesc">
-                <em style="color: whitesmoke;">Innovating the Future with Artificial Intelligence.</em><br>
+                <em style="color: whitesmoke;">Innovating the Future with Aritificial Intelligence.</em><br>
                 AI Lab is an educational website that introduces AI,
                 Machine Learning, Prompt Engineering and Innovation Challenges.
                 <br>
             </p>
         </div>
-
         <!--quick Link-->
+        <div class="footCol">
+
+            <h3>Quick Links</h3>
+            <ul class="footerLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="aiIntro.html">AI</a></li>
+                <li><a href="machineLearning.html">ML Projects</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="challenge.html">Challenges</a></li>
+            </ul>
+        </div>
         <div class="footCol">
             <h3>Contact Us</h3>
             <p>group16@ailab.com</p>
-            <p>GitHub</p>
+            <p><a href="https://github.com/yichengchai/AI-and-Innovation-Club" target="_blank">GitHub</a></p>
+            <p><a href="https://www.instagram.com/chaiyc1111" target="_blank">Instagram</a></p>
             <p>UTAR Kampar Campus</p>
         </div>
 
@@ -226,7 +242,7 @@
     <!--Pop up content(hidden) unless user click-->
     <div id="privacyContent" style="display: none;">
         <p>
-            Ai Lab respect your privacy. This is only an education website.
+            AI Lab respect your privacy. This is only an education website.
         </p>
         <p>No password is collected.<br>
             No payment information is stored. <br>
@@ -236,10 +252,26 @@
     <div id="termContent" style="display: none;">
         <p>
             This website is developed for educational purpose. </p>
-        <p>User may browse freely. All the content is for learning purposes.</p>
+        <p>User mahy browse freely. All the content is for learning purposes.</p>
         <p>AI Lab is not responsible for the misuse.</p>
     </div>
 
+    <script>
+        //to log out]
+        // Universal function to clear cookies from any subpage
+        function logoutUser() {
+            // Setting an expiration date in the past deletes the cookies site-wide (path=/)
+            document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+            document.cookie = "email=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Lax";
+
+            alert("You have been logged out successfully.");
+
+            // Redirects the user instantly back to the homepage to log in again
+            window.location.href = "index.html";
+        }
+
+
+    </script>
     <script src="headerFooter.js"></script>
     <script src="workshop.js"></script>
 </body>

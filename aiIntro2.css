@@ -2,19 +2,23 @@
    GLOBAL SETTINGS
 ================================================ */
 * {
-    font-family: "Montserrat", sans-serif;}
+    font-family: "Montserrat", sans-serif;
+}
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
 html {
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+}
 
 body {
     background: #050816;
-    color: white;}
+    color: white;
+}
 
 /* ================================================
    AI IMPACT SECTION
@@ -23,12 +27,14 @@ body {
     width: 90%;
     margin: auto;
     padding: 100px 0;
-    text-align: center;}
+    text-align: center;
+}
 
 #aiImpact h3 {
     color: white;
     font-size: 3rem;
-    margin-bottom: 60px;}
+    margin-bottom: 60px;
+}
 
 /* ================================================
    BENEFIT SLIDER
@@ -37,24 +43,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;}
+    gap: 30px;
+}
 
 .benefitWindow {
     width: 940px;
     overflow: hidden;
     padding: 20px 50px;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
 .benefitTrack {
     display: flex;
-    transition: .8s ease;}
+    transition: .8s ease;
+}
 
 /* ================================================
    BENEFIT CARDS
 ================================================ */
 .benefit {
     min-width: 270px;
-    margin: 0 15px;}
+    margin: 0 15px;
+}
 
 .benefitContent {
     padding: 30px;
@@ -68,35 +78,52 @@ body {
     animation:
         floatBenefit 5s ease-in-out infinite,
         benefitGlow 8s linear infinite;
-    transition: .4s;}
+    transition: .4s;
+}
 
 @keyframes floatBenefit {
+
     0%,
     100% {
-        transform: translateY(0);}
+        transform: translateY(0);
+    }
+
     50% {
-        transform: translateY(-6px);}}
+        transform: translateY(-6px);
+    }
+}
 
 @keyframes benefitGlow {
     0% {
         border-color: #3B82F6;
-        box-shadow: 0 0 15px #3B82F6;}
+        box-shadow: 0 0 15px #3B82F6;
+    }
+
     25% {
         border-color: #8B5CF6;
-        box-shadow: 0 0 20px #8B5CF6;}
+        box-shadow: 0 0 20px #8B5CF6;
+    }
+
     50% {
         border-color: #06B6D4;
-        box-shadow: 0 0 20px #06B6D4;}
+        box-shadow: 0 0 20px #06B6D4;
+    }
+
     75% {
         border-color: #22C55E;
-        box-shadow: 0 0 20px #22C55E;}
+        box-shadow: 0 0 20px #22C55E;
+    }
+
     100% {
         border-color: #3B82F6;
-        box-shadow: 0 0 15px #3B82F6;}}
+        box-shadow: 0 0 15px #3B82F6;
+    }
+}
 
 .benefitContent:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, .15);}
+    background: rgba(255, 255, 255, .15);
+}
 
 /* ================================================
    SLIDER BUTTONS
@@ -111,19 +138,22 @@ body {
     color: white;
     font-size: 25px;
     cursor: pointer;
-    transition: .3s;}
+    transition: .3s;
+}
 
 .prevBtn:hover,
 .nextBtn:hover {
     transform: scale(1.1);
     box-shadow:
-        0 0 20px #3B82F6;}
+        0 0 20px #3B82F6;
+}
 
 /* ================================================
    DOTS
 ================================================ */
 .dots {
-    margin-top: 40px;}
+    margin-top: 40px;
+}
 
 .dots span {
     display: inline-block;
@@ -132,13 +162,15 @@ body {
     border-radius: 50%;
     background: white;
     margin: 10px;
-    opacity: .5;}
+    opacity: .5;
+}
 
 .dots .active {
     opacity: 1;
     background: #3B82F6;
     box-shadow:
-        0 0 15px #3B82F6;}
+        0 0 15px #3B82F6;
+}
 
 /* ================================================
    AI INNOVATORS SECTION
@@ -147,13 +179,15 @@ body {
     width: 90%;
     margin: auto;
     padding: 100px 0;
-    color: white;}
+    color: white;
+}
 
 .AiInnovators h3 {
     text-align: center;
     color: white;
     font-size: 3rem;
-    margin-bottom: 70px;}
+    margin-bottom: 70px;
+}
 
 /* ================================================
    INNOVATOR CARDS
@@ -176,63 +210,87 @@ body {
     transition:
         opacity .8s,
         transform .4s,
-        box-shadow .4s;}
+        box-shadow .4s;
+    touch-action: manipulation;
+}
+
 /* scroll reveal */
 .innovator.show {
     opacity: 1;
-    transform: translateY(0);}
+    transform: translateY(0);
+}
 
 /* floating */
 .innovator:nth-child(2) {
-    animation: floatInnovator 5s ease-in-out infinite;}
+    animation: floatInnovator 5s ease-in-out infinite;
+}
 
 .innovator:nth-child(3) {
-    animation: floatInnovator 6s ease-in-out infinite;}
+    animation: floatInnovator 6s ease-in-out infinite;
+}
 
 .innovator:nth-child(4) {
-    animation: floatInnovator 7s ease-in-out infinite;}
+    animation: floatInnovator 7s ease-in-out infinite;
+}
 
 @keyframes floatInnovator {
+
     0%,
     100% {
-        transform: translateY(0);}
+        transform: translateY(0);
+    }
+
     50% {
-        transform: translateY(-8px);}}
+        transform: translateY(-8px);
+    }
+}
 
 /* animated border */
 .innovator {
     animation-name: borderInnovator;
     animation-duration: 8s;
-    animation-iteration-count: infinite;}
+    animation-iteration-count: infinite;
+}
 
 @keyframes borderInnovator {
     0% {
         border-color: #3B82F6;
         box-shadow:
-            0 0 15px #3B82F6;}
+            0 0 15px #3B82F6;
+    }
+
     25% {
         border-color: #8B5CF6;
         box-shadow:
-            0 0 25px #8B5CF6;}
+            0 0 25px #8B5CF6;
+    }
+
     50% {
         border-color: #06B6D4;
         box-shadow:
-            0 0 25px #06B6D4;}
+            0 0 25px #06B6D4;
+    }
+
     75% {
         border-color: #22C55E;
         box-shadow:
-            0 0 25px #22C55E;}
+            0 0 25px #22C55E;
+    }
+
     100% {
         border-color: #3B82F6;
         box-shadow:
-            0 0 15px #3B82F6;}}
+            0 0 15px #3B82F6;
+    }
+}
 
 /* hover */
 .innovator:hover {
     transform:
         translateY(-10px) scale(1.03);
     box-shadow:
-        0 0 40px #8B5CF6;}
+        0 0 40px #8B5CF6;
+}
 
 /* ================================================
    SHINE EFFECT
@@ -249,10 +307,12 @@ body {
             transparent,
             rgba(255, 255, 255, .35),
             transparent);
-    transition: .8s;}
+    transition: .8s;
+}
 
 .innovator:hover::after {
-    left: 140%;}
+    left: 140%;
+}
 
 /* ================================================
    PROFILE IMAGE
@@ -261,7 +321,8 @@ body {
     position: absolute;
     left: -45px;
     top: 50%;
-    transform: translateY(-50%);}
+    transform: translateY(-50%);
+}
 
 .avatar {
     width: 130px;
@@ -273,7 +334,8 @@ body {
     box-shadow:
         0 0 15px #3B82F6,
         0 0 30px rgba(139, 92, 246, .5);
-    transition: .5s;}
+    transition: .5s;
+}
 
 .innovator:hover .avatar {
     transform:
@@ -281,7 +343,8 @@ body {
     border-color: #8B5CF6;
     box-shadow:
         0 0 25px #8B5CF6,
-        0 0 40px #06B6D4;}
+        0 0 40px #06B6D4;
+}
 
 /* ================================================
    TEXT
@@ -290,7 +353,8 @@ body {
     font-size: 2rem;
     margin-bottom: 15px;
     position: relative;
-    display: inline-block;}
+    display: inline-block;
+}
 
 .content h4::after {
     content: "";
@@ -303,11 +367,13 @@ body {
     background:
         linear-gradient(90deg,
             #3B82F6,
-            #8B5CF6);}
+            #8B5CF6);
+}
 
 .content p {
     font-size: 1.1rem;
-    line-height: 1.8;}
+    line-height: 1.8;
+}
 
 /* ================================================
    FUTURE OF AI TIMELINE
@@ -316,18 +382,21 @@ body {
     width: 90%;
     margin: auto;
     padding: 120px 0;
-    color: white;}
+    color: white;
+}
 
 .futureOfAi h3 {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 80px;}
+    margin-bottom: 80px;
+}
 
 .aiTimeline {
     position: relative;
     width: 900px;
     max-width: 100%;
-    margin: auto;}
+    margin: auto;
+}
 
 /* glowing center line */
 .aiTimeline::before {
@@ -343,7 +412,8 @@ body {
             #8B5CF6,
             #06B6D4);
     box-shadow:
-        0 0 20px #3B82F6;}
+        0 0 20px #3B82F6;
+}
 
 /* hidden state */
 .future {
@@ -354,20 +424,24 @@ body {
     transform: translateY(80px);
     transition:
         opacity 1s ease,
-        transform 1s ease;}
+        transform 1s ease;
+}
 
 /* visible state after scrolling */
 .future.show {
     opacity: 1;
-    transform: translateY(0);}
+    transform: translateY(0);
+}
 
 .future:nth-child(odd) {
     left: 0;
-    text-align: center;}
+    text-align: center;
+}
 
 .future:nth-child(even) {
     left: 50%;
-    text-align: center;}
+    text-align: center;
+}
 
 /* timeline dots */
 .futureNode {
@@ -379,13 +453,16 @@ body {
     background: #3B82F6;
     box-shadow:
         0 0 15px #3B82F6,
-        0 0 35px #8B5CF6;}
+        0 0 35px #8B5CF6;
+}
 
 .future:nth-child(odd) .futureNode {
-    right: -12px;}
+    right: -12px;
+}
 
 .future:nth-child(even) .futureNode {
-    left: -12px;}
+    left: -12px;
+}
 
 /* future glass cards */
 .futureContent {
@@ -397,31 +474,37 @@ body {
     border: 1px solid #3B82F6;
     box-shadow:
         0 0 20px rgba(59, 130, 246, .4);
-    transition: .4s;}
+    transition: .4s;
+}
 
 .futureContent:hover {
     transform: scale(1.05);
     border-color: #8B5CF6;
     box-shadow:
-        0 0 35px #8B5CF6;}
+        0 0 35px #8B5CF6;
+}
 
 .futureContent h4 {
     font-size: 1.5rem;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
 
 .futureContent p {
-    line-height: 1.7;}
+    line-height: 1.7;
+}
 
 /* ================================================
    AI JOURNEY INTRO
 ================================================ */
 #aiJourney {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;}
+    color: white;
+}
 
 .journeyIntro h1 {
     font-size: 5rem;
@@ -432,19 +515,22 @@ body {
             #06B6D4);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;}
+    color: transparent;
+}
 
 .journeyIntro p {
     max-width: 700px;
     margin: 25px auto;
     font-size: 1.4rem;
-    color: #ddd;}
+    color: #ddd;
+}
 
 .journeyNodes {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;}
+    margin-top: 70px;
+}
 
 .journeyNode {
     width: 200px;
@@ -463,16 +549,19 @@ body {
     border: 2px solid #3B82F6;
     box-shadow:
         0 0 25px #3B82F6;
-    transition: .4s;}
+    transition: .4s;
+}
 
 .journeyNode:hover {
     transform: scale(1.15);
     box-shadow:
-        0 0 45px #8B5CF6;}
+        0 0 45px #8B5CF6;
+}
 
 .journeyNode span {
     color: #06B6D4;
-    font-size: 1.2rem;}
+    font-size: 1.2rem;
+}
 
 /* fixed circle text size */
 #aiJourney .journeyNode h3 {
@@ -480,7 +569,8 @@ body {
     max-width: 130px;
     margin: 0;
     line-height: 1.2;
-    text-align: center;}
+    text-align: center;
+}
 
 .line {
     width: 130px;
@@ -490,115 +580,163 @@ body {
             #3B82F6,
             #8B5CF6);
     box-shadow:
-        0 0 15px #3B82F6;}
+        0 0 15px #3B82F6;
+}
 
 .scrollText {
     margin-top: 70px;
     color: #3B82F6;
     animation:
-        scrollBounce 2s infinite;}
+        scrollBounce 2s infinite;
+}
 
 @keyframes scrollBounce {
     50% {
-        transform: translateY(15px);}}
+        transform: translateY(15px);
+    }
+}
 
 /* ================================================
    MOBILE RESPONSIVE
 ================================================ */
 @media(max-width:900px) {
+    .benefit {
+        min-width: 0;
+        width: 100%;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    .learningTracker {
+        display: none;
+    }
+
+    #aiJourney {
+        padding: 100px 20px 80px;
+    }
+
+    .journeyIntro h1 {
+        font-size: 2.4rem;
+    }
+
+    .journeyNode {
+        width: 150px;
+        height: 150px;
+        padding: 15px;
+    }
+
+    #aiJourney .journeyNode h3 {
+        font-size: 1rem;
+        max-width: 110px;
+    }
+
+    .line {
+        width: 3px;
+        height: 60px;
+    }
 
     .benefitSlider {
-        flex-direction: column;}
+        flex-direction: column;
+    }
 
     .benefitWindow {
-        width: 100%;}
+        width: 100%;
+        padding: 20px 10px;
+    }
 
     .innovator {
         padding-left: 40px;
         padding-top: 100px;
         flex-direction: column;
-        text-align: center;}
+        text-align: center;
+    }
 
     .avatarContainer {
         position: relative;
         left: auto;
         top: auto;
-        transform: none;}
+        transform: none;
+    }
 
     .aiTimeline::before {
-        left: 20px;}
+        left: 20px;
+    }
 
-    .future {
+    .future,
+    .future:nth-child(odd),
+    .future:nth-child(even) {
         position: relative;
-        width: 50%;
-        padding: 30px;
-        opacity: 0;
-        transform: translateY(80px);
-        transition:
-            opacity 1s ease,
-            transform 1s ease;}
+        width: calc(100% - 55px);
+        left: 45px;
+        padding: 20px;
+        text-align: left;
+    }
 
     .future.show {
         opacity: 1;
-        transform: translateY(0);}
+        transform: translateY(0);
+    }
 
-    .futureNode {
-        left: 8px !important;
-        right: auto;}
+    .futureNode,
+    .future:nth-child(odd) .futureNode,
+    .future:nth-child(even) .futureNode {
+        left: -37px;
+        right: auto;
+    }
 
     .journeyNodes {
         flex-direction: column;
-        gap: 30px}
-
-    .line {
-        width: 3px;
-        height: 80px;}
-
-    .journeyIntro h1 {
-        font-size: 3rem;}}
+        gap: 30px
+    }
+}
 
 /*================================================
     AI LEARNING PROGRESS TRACKER
 ================================================*/
 .learningTracker {
-    position:fixed;
-    right:20px;
-    top:70%;
-    transform:translateY(-50%);
-    width:190px;
-    padding:25px;
-    border-radius:20px;
-    background:rgba(18,18,40,.6);
-    backdrop-filter:blur(15px);
-    border:2px solid #3B82F6;
+    position: fixed;
+    right: 20px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 190px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(18, 18, 40, .6);
+    backdrop-filter: blur(15px);
+    border: 2px solid #3B82F6;
     box-shadow:
-    0 0 30px rgba(59,130,246,.5);
-    color:white;
-    z-index:1000;}
+        0 0 30px rgba(59, 130, 246, .5);
+    color: white;
+    z-index: 1000;
+}
 
 
 .learningTracker h3 {
     text-align: center;
     color: #80D8FF;
     text-shadow:
-        0 0 10px #3B82F6;}
+        0 0 10px #3B82F6;
+}
 
 .progressStep {
     margin: 25px 0;
     color: #D9E4F5;
     font-size: .95rem;
-    transition: .3s;}
+    transition: .3s;
+}
 
 .progressStep.completed {
     color: #00FF99;
     text-shadow:
-        0 0 10px #00FF99;}
+        0 0 10px #00FF99;
+}
 
 .progressPercent {
     margin-top: 30px;
     text-align: center;
     color: white;
-    font-weight: bold;}
+    font-weight: bold;
+}
 
 /* ================================================
    QUIZ CALL TO ACTION
@@ -607,7 +745,8 @@ body {
     width: 90%;
     margin: auto;
     padding: 120px 0;
-    text-align: center;}
+    text-align: center;
+}
 
 .quizContainer {
     max-width: 800px;
@@ -618,30 +757,33 @@ body {
     background: rgba(255, 255, 255, .08);
     backdrop-filter: blur(12px);
     box-shadow: 0 0 25px rgba(59, 130, 246, .4);
-    transition: .4s;}
+    transition: .4s;
+}
 
 .quizContainer:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 40px #8B5CF6;}
+    box-shadow: 0 0 40px #8B5CF6;
+}
 
-.quizContainer h2{
-    font-size:3rem;
-    margin-bottom:25px;
+.quizContainer h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
     background:
-    linear-gradient(
-        90deg,
-        #3B82F6,
-        #8B5CF6,
-        #06B6D4);
-    background-clip:text;
-    -webkit-background-clip:text;
-    color:transparent;}
+        linear-gradient(90deg,
+            #3B82F6,
+            #8B5CF6,
+            #06B6D4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 .quizContainer p {
     font-size: 1.15rem;
     line-height: 1.8;
     color: #dddddd;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+}
 
 .quizButton {
     display: inline-block;
@@ -654,18 +796,22 @@ body {
     font-size: 1.1rem;
     font-weight: bold;
     transition: .3s;
-    box-shadow: 0 0 20px rgba(59, 130, 246, .5);}
+    box-shadow: 0 0 20px rgba(59, 130, 246, .5);
+}
 
 .quizButton:hover {
     transform: scale(1.08);
     background: #8B5CF6;
-    box-shadow: 0 0 30px #8B5CF6;}
+    box-shadow: 0 0 30px #8B5CF6;
+}
 
 #quizCTA {
     opacity: 0;
     transform: translateY(80px);
-    transition: 1s;}
+    transition: 1s;
+}
 
 #quizCTA.show {
     opacity: 1;
-    transform: translateY(0);}
+    transform: translateY(0);
+}

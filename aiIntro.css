@@ -495,8 +495,63 @@
     RESPONSIVE
 ================================================*/
 @media(max-width:768px) {
-    .introductionOfAi {
-        font-size: 2.2rem;}
+    .compareRow {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hide the original header row (Difference/AI/Human icons) since we're adding inline labels instead */
+    .compareRow:first-child {
+        display: none;
+    }
+
+    /* Group each comparison row into a card-like block */
+    .compareRow:not(:first-child) {
+        margin-bottom: 25px;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid rgba(59, 130, 246, .3);
+    }
+
+    /* Category label (e.g. "Learning", "Decision Making") styled as a heading */
+    .compareRow:not(:first-child) .compareCell:first-child {
+        background: rgba(59, 130, 246, .25);
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+        text-shadow: 0 0 10px #00E5FF;
+    }
+
+    /* AI answer cell — add a labeled prefix */
+    .compareRow:not(:first-child) .compareCell:nth-child(2)::before {
+        content: "🤖 AI: ";
+        display: block;
+        font-weight: bold;
+        color: #00E5FF;
+        margin-bottom: 6px;
+    }
+
+    /* Human answer cell — add a labeled prefix */
+    .compareRow:not(:first-child) .compareCell:nth-child(3)::before {
+        content: "🧠 Human: ";
+        display: block;
+        font-weight: bold;
+        color: #9D4EDD;
+        margin-bottom: 6px;
+    }
+
+    .compareCell {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    
+    .heroTitle h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;}
+
+    .aiQuestion {
+        display: none;
+    }
+
     .introCard {
         max-width: 950px;
         margin: 60px auto;
@@ -581,6 +636,11 @@
     color:white;
     font-weight:bold;}
 
+@media(max-width:768px) {
+    .learningTracker {
+        display: none;
+    }
+}
     /*================================================
     NEXT PAGE BUTTON
 ================================================*/

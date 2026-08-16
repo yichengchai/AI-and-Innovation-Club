@@ -2,6 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const title = document.querySelector(".dropTitle");
   const letters = title.querySelectorAll("span");
   const paragraph = document.querySelector(".detailHero p");
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  }
 
   letters.forEach((letter, index) => {
     letter.style.animationDelay = `${index * 0.08}s`;
